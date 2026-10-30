@@ -7,9 +7,8 @@ import numpy as np
 
 _DEFAULTS = { #just in case
     'wheelbase': 0.22,
-    'wheel_radius': 0.04,
-    'max_steering_angle': 0.4695,
-    'steering_gain': 1.0,
+    'max_steering_angle': 1,
+    'steering_gain': 0.4695,
     'steering_rate': math.pi,
 }
 
@@ -71,6 +70,6 @@ def measurement_model(state_estimate, delta_time, **kwargs): #maps state to pred
 #alias with the correct spelling cuz i fucked it up the first tiem and im scared to change it and blow the whoel thingup
 state_transition_jacobian = state_transistion_jacobian
 
-def steering_model(control_angle):
+def steering_model(control_angle): #convert from 0-1 control to rads
     lim = config['max_steering_angle']
     return config['steering_gain'] * max(-lim, min(lim, control_angle))

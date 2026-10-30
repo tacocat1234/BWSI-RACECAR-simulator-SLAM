@@ -44,7 +44,7 @@ class PID:  # pid class very simple
 class SLAMController(Node):
     def __init__(self, goal_xy, lookahead_cells=8, pid_gains=(1.0, 0.0, 0.0), #buncha params, configurbale
                  obstacle_threshold=60, control_rate=10.0, base_speed=0.5,
-                 max_steering_angle=0.4695, inflation_radius=0.35, goal_tolerance=0.2):
+                 max_steering_angle=1, inflation_radius=0.35, goal_tolerance=0.2): #max steering angle if you wnat to limit car from turning too agressively
         super().__init__('slam_controller')
 
         self.pose_sub = self.create_subscription( #read from state estimate pose, so we know where we are
@@ -120,7 +120,7 @@ class SLAMController(Node):
         target_x, target_y = self._get_lookahead_target(path) #get lookahead target
         left, forward = self._world_to_body(target_x - pose.x, target_y - pose.y, pose.theta)
 
-        heading_error = math.atan2(left, forward) #heading error (angle to target)
+        heading_error = math.atan2(left, forward) #heading error (angle to target), unit rads
 
         now_s = self.get_clock().now().nanoseconds * 1e-9
         steering = self.pid.tick(0.0, heading_error, now=now_s) #steering based on heading error and pid

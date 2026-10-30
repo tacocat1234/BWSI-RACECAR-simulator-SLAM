@@ -38,8 +38,8 @@ def build_nodes(goal_xy):
         lookahead_cells=8, #8*5 = 40 cm lkhd
         pid_gains=(0.6, 0.0, 0.0),
         control_rate=10.0,
-        base_speed=0.5, #m/s
-        max_steering_angle=0.4695,
+        base_speed=1, #out of control 0-1 not m/s
+        max_steering_angle=1, #based on cotnrol
         inflation_radius=0.35, #m, give car radius to avoid
         goal_tolerance=0.2,
     )

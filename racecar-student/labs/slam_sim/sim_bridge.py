@@ -9,10 +9,6 @@ from sensor_msgs.msg import LaserScan
 from ackermann_msgs.msg import AckermannDriveStamped
 
 #sim consts
-SIM_MAX_SPEED = 0.5 #set to determine max speed in sim
-FULL_COMMAND_SPEED = 4.0 #for conversion, m/s
-MAX_STEER_RAD = math.radians(26.9) #bicycle steering angle at angle = +-1, lowkey should be importin from yaml
-
 LIDAR_RANGE_MIN = 0.05 #m
 LIDAR_RANGE_MAX = 12.0 #m
 LIDAR_PERIOD = 0.1 #sec
@@ -32,7 +28,16 @@ class RacecarBridgeNode(Node):
         self._last_scan_time = -1e9
         self._last_raw = None
 
-        rc.drive.set_max_speed(SIM_MAX_SPEED)
+        self ._max_speed = 0.25
+
+        rc.drive.set_max_speed(1) #since this is coser to irl implementaiton it hink
+
+    def set_max_speed(self, max_speed: float = 0.25) -> None: #stolen directly from racecar library real drive
+        assert (
+            0.0 <= max_speed <= 1.0
+        ), f"max_speed [{max_speed}] must be between 0.0 and 1.0 inclusive."
+
+        self._max_speed = max_speed
 
     #/drive -> remembered, applied at end of frame
     def drive_callback(self, msg):
@@ -40,8 +45,8 @@ class RacecarBridgeNode(Node):
         self.cmd_steer = float(msg.drive.steering_angle)
 
     def apply_drive(self):
-        speed_ratio = self.cmd_speed / (FULL_COMMAND_SPEED * SIM_MAX_SPEED) 
-        angle_ratio = -self.cmd_steer / MAX_STEER_RAD #flip sign to convert from ros convetion to RACECAR convention
+        speed_ratio = self.cmd_speed * self._max_speed #set speed angle is like this for real robot as well
+        angle_ratio = -self.cmd_steer #flip sign to convert from ros convetion to RACECAR convention
         speed_ratio = max(-1.0, min(1.0, speed_ratio))
         angle_ratio = max(-1.0, min(1.0, angle_ratio))
         self.rc.drive.set_speed_angle(speed_ratio, angle_ratio)
@@ -51,7 +56,7 @@ class RacecarBridgeNode(Node):
         msg.data = float(self.rc.physics.get_encoder_speed()) #already m/s, forward positive
         self.encoder_pub.publish(msg)
 
-    def publish_scan(self):
+    def publish_scan(self): #simulates output of REAL lidar not racecar lidar
         raw = np.asarray(self.rc.lidar.get_samples(), dtype=np.float32) #cm, clockwise, 0 = straight ahead
         if self._last_raw is not None and np.array_equal(raw, self._last_raw):
             return #lidar not new scan
@@ -59,9 +64,9 @@ class RacecarBridgeNode(Node):
 
         n = len(raw)
         inc = 2.0 * math.pi / n
-        cm = raw[(-np.arange(n)) % n] #math bullshitery to convert from ROS to RACECAR convention (again)
-        ranges = cm / 100.0
-        ranges[cm <= 0] = np.inf #0 = inf so no
+        cm = raw[(-np.arange(n)) % n] #math bullshitery to convert from RACECAR to ROS convention (again)
+        ranges = cm / 100.0 #RACECAR reports in cm, real car produces m
+        ranges[cm <= 0] = np.inf #0 is inf in RACECAR but real lidar produces inf (i think)
 
         msg = LaserScan()
         msg.header.stamp = self.get_clock().now().to_msg()
@@ -74,7 +79,7 @@ class RacecarBridgeNode(Node):
         msg.ranges = ranges
         self.scan_pub.publish(msg)
 
-    def step(self): #one framee
+    def step(self): #one frame
         CLOCK.advance(self.rc.get_delta_time())
         now = CLOCK.ns * 1e-9
 

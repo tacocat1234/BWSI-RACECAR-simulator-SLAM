@@ -8,7 +8,7 @@ from slam_setup import build_nodes #install and import
 from sim_bridge import RacecarBridgeNode
 from map_plot import save_map_plot
 
-GOAL_XY = (0.7, -6) #goal froms start frame, in m. plus x forwards, plus y to the right
+GOAL_XY = (0.7, -6) #goal from start frame, in m. plus x forwards, plus y to the left
 PLOT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "map_plots") #thingy
 
 rc = racecar_core.create_racecar()
@@ -23,7 +23,8 @@ def start():
     global bridge, se_node, controller, plot_count, trail
     rc.drive.stop()
     se_node, controller = build_nodes(GOAL_XY) #reset fake ros bus + clock
-    bridge = RacecarBridgeNode(rc) # \
+    bridge = RacecarBridgeNode(rc)
+    bridge.set_max_speed(0.5)
     plot_count = 0
     trail = []
     rc.set_update_slow_time(1.0)
