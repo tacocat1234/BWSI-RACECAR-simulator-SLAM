@@ -1,0 +1,6 @@
+#!/home/sixian/Documents/racecar-neo-installer/racecar-venv/bin/python3.9
+import sys
+from mistune.__main__ import cli
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(cli())

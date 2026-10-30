@@ -1,0 +1,6 @@
+#params of digital RACECAR; units: meters, radians, seconds, stolen from simulator github
+wheelbase: 0.22 #wheelbase (m), approx.
+wheel_radius: 0.04 #only used by velocity_model (raw wheel angular speed -> m/s); unused in sim, also completely uselses now
+max_steering_angle: 0.4695 #26.9 deg = bicycle-model steering angle at full lock (from Drive.cs maxDriveAngle)
+steering_gain: 0.4695 #sysid,moved from ekf models. for sim, is steering angle max/1
+steering_rate: 3.1416 # servo speed, rad/s (Drive.cs: 180 deg/s, lock to lock in 0.3 s)

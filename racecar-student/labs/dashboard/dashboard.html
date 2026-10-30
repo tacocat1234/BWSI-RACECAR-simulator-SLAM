@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RACECAR Neo Sensor Dashboard</title>
+<!-- Layout and palette from the RACECAR Neo web teleop dashboard (GPL-3.0). -->
+<style>
+  :root { --white: #FFFFFF; --page: #FAF7F4; --halo: #F5F5F7; --steel: #E7E1DB; --carbon: #231F20; --tarmac: #231F20;
+          --rc-crimson: #A01936; --rc-orange: #EC8B48; --accent: #A55312; --accent-dark: #EC8B48; --red: #A01936;
+          --x: #EC8B48; --y: #7FC8A9; --z: #8FB3FF; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: var(--page); color: var(--carbon); }
+  .topbar { background: var(--tarmac); color: var(--halo); padding: 0.8rem 1.5rem; display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 3px solid transparent; border-image: linear-gradient(100deg, var(--rc-orange), var(--rc-crimson)) 1; }
+  .wordmark { font-size: 1.05rem; font-weight: 700; letter-spacing: 0.02em; background: linear-gradient(100deg, var(--rc-orange), var(--rc-crimson));
+              -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .topbar h1 { font-size: 1.3rem; }
+  .meta { color: rgba(245, 245, 247, 0.72); font-size: 0.85rem; margin-top: 0.2rem; }
+  .meta b { color: var(--white); }
+  .topbar button { background: transparent; border: 1px solid var(--red); color: var(--red); font-weight: bold; font-family: inherit;
+                   padding: 0.4rem 1rem; border-radius: 6px; cursor: pointer; }
+  .topbar button:hover { background: var(--red); color: var(--white); }
+  /* Rows share one gap; cards in a row stretch to the tallest so edges line up */
+  main { padding: 1rem 1.5rem; display: grid; gap: 1rem; }
+  .grid { display: grid; grid-template-columns: 400px 452px 1fr; gap: 1rem; align-items: stretch; }
+  .column { display: grid; grid-template-rows: auto 1fr; gap: 1rem; }
+  .span2 { grid-column: span 2; }
+  .span3 { grid-column: span 3; }
+  .matrixrow { display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: start; }
+  .matrix { display: grid; grid-template-columns: repeat(24, 26px); grid-auto-rows: 26px; gap: 3px; background: #0E0C0C;
+            padding: 8px; border-radius: 6px; width: max-content; user-select: none; }
+  .matrix span { border-radius: 50%; background: #3A100E; cursor: pointer; }
+  .matrix span.on { background: #FF3020; box-shadow: 0 0 6px #FF3020; }
+  .matrix.small { grid-template-columns: repeat(24, 10px); grid-auto-rows: 10px; gap: 2px; padding: 5px; }
+  .matrix.small span { cursor: default; }
+  .ledrow { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; margin-top: 0.6rem; }
+  .ledbar { display: grid; grid-template-columns: repeat(84, 11px); gap: 2px; background: #0E0C0C; padding: 6px; border-radius: 6px; width: max-content; user-select: none; }
+  .ledbar span { height: 22px; border-radius: 3px; background: #000; cursor: pointer; box-shadow: inset 0 0 0 1px #333; }
+  .ledbar.small { grid-template-columns: repeat(84, 8px); }
+  .ledbar.small span { height: 10px; cursor: default; }
+  .ledtools { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+  .ledtools label { margin: 0 0.6rem 0 0; display: flex; align-items: center; gap: 0.4rem; }
+  .ledtools button { background: var(--white); border: 1px solid rgba(35, 31, 32, 0.28); color: var(--tarmac); font: inherit;
+                     padding: 0.35rem 0.8rem; border-radius: 6px; cursor: pointer; }
+  .ledtools button:hover { background: var(--halo); border-color: var(--accent); color: var(--accent); }
+  input[type=text] { display: block; width: 100%; max-width: 420px; padding: 0.35rem; margin-top: 0.3rem; font: inherit;
+                     border: 1px solid rgba(35, 31, 32, 0.28); border-radius: 6px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .centered { display: flex; flex-direction: column; }
+  .centered canvas { margin: auto 0; }
+  @media (max-width: 1400px) { .grid { grid-template-columns: 1fr; } .span2, .span3 { grid-column: auto; } .matrixrow { grid-template-columns: 1fr; } }
+  .card { background: var(--white); border: 1px solid var(--steel); border-radius: 12px; padding: 1rem; margin: 0;
+          box-shadow: 0 6px 18px rgba(35, 31, 32, 0.07); }
+  .card h2 { font-size: 1rem; color: var(--tarmac); margin-bottom: 0.5rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--accent-dark); }
+  .view { background: var(--tarmac); border-radius: 6px; width: 100%; max-width: 368px; display: block; aspect-ratio: 4 / 3; object-fit: contain; }
+  figure { margin: 0 0 0.7rem 0; }
+  figcaption, .legend { font-size: 0.7rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(35, 31, 32, 0.55); margin-top: 0.3rem; }
+  canvas { background: var(--tarmac); border-radius: 6px; width: 100%; display: block; }
+  canvas.chart { height: 150px; }
+  .legend span { margin-right: 0.8rem; }
+  .readout { font-family: Menlo, Consolas, monospace; font-size: 0.85rem; margin-top: 0.4rem; white-space: pre; }
+  .state { font-size: 1.3rem; color: var(--white); background: var(--tarmac); border-radius: 8px; padding: 0.9rem 0.6rem; margin-bottom: 0.7rem; text-align: center; }
+  .state.moving { background: var(--accent); }
+  .state.timeout, .state.offline { background: var(--red); }
+  .pad { display: grid; grid-template-columns: repeat(3, 84px); grid-template-rows: repeat(3, 84px); gap: 8px; justify-content: center; margin: 0.8rem auto;
+         touch-action: none; user-select: none; }
+  .pad button { font-size: 1.8rem; border-radius: 12px; border: 2px solid var(--tarmac); background: var(--white); color: var(--tarmac); cursor: pointer; }
+  .pad button.down { background: var(--accent); border-color: var(--accent); color: var(--white); }
+  .pad .mid { background: var(--halo); border: 1px solid var(--steel); border-radius: 12px; display: flex; align-items: center; justify-content: center;
+              font-size: 0.7rem; color: rgba(35, 31, 32, 0.5); text-align: center; }
+  label { display: block; color: rgba(35, 31, 32, 0.6); font-size: 0.8rem; margin-top: 0.6rem; }
+  label b { color: var(--carbon); }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  .matrixrow button { background: var(--white); border: 1px solid rgba(35, 31, 32, 0.28); color: var(--tarmac); font: inherit;
+           padding: 0.35rem 0.8rem; border-radius: 6px; margin: 0.8rem 0.4rem 0 0; cursor: pointer; }
+  .matrixrow button:hover { background: var(--halo); border-color: var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div>
+    <span class="wordmark">RACECAR Neo</span>
+    <h1>Sensor Dashboard</h1>
+    <div class="meta">frame rate: <b id="fps">?</b> fps &bull; speed cmd: <b id="speedCmd">?</b> &bull; angle cmd: <b id="steer">?</b>
+      &bull; encoder: <b id="enc">?</b> m/s</div>
+  </div>
+  <button onclick="stopCar()" title="Release every button and stop the car">STOP</button>
+</div>
+<main>
+<div class="grid">
+  <div class="card">
+    <h2>Camera</h2>
+    <figure><img id="color" class="view" alt="color camera view"><figcaption>Color</figcaption></figure>
+    <figure><img id="depth" class="view" alt="depth camera view"><figcaption>Depth: bright near, dark far, black no return</figcaption></figure>
+  </div>
+  <div class="card centered">
+    <h2>Lidar</h2>
+    <canvas id="lidar" width="420" height="420" title="Scan points around the car; the nose is up. Scroll to zoom."></canvas>
+    <div class="legend">range <span id="lidarRange">4</span> m</div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <h2>Encoder</h2>
+      <div class="state offline" id="state">Waiting for user program mode</div>
+      <canvas id="encChart" class="chart" width="600" height="150"></canvas>
+      <div class="legend"><span style="color:#fff;background:#231F20;padding:0 4px">encoder m/s</span><span style="color:var(--accent)">target m/s</span></div>
+    </div>
+    <div class="card">
+      <h2>IMU</h2>
+      <canvas id="accChart" class="chart" width="600" height="150"></canvas>
+      <div class="legend">Linear acceleration m/s&sup2;: <span style="color:var(--x)">x</span><span style="color:var(--y)">y</span><span style="color:var(--z)">z</span></div>
+      <canvas id="gyroChart" class="chart" width="600" height="150" style="margin-top:0.6rem"></canvas>
+      <div class="legend">Angular velocity rad/s: <span style="color:var(--x)">x</span><span style="color:var(--y)">y</span><span style="color:var(--z)">z</span></div>
+      <div class="readout" id="imu"></div>
+    </div>
+  </div>
+  <div class="card span2">
+    <h2>Battery</h2>
+    <div class="state" id="battery">? V &bull; ? A</div>
+    <div class="pair">
+      <div>
+        <canvas id="voltChart" class="chart" width="600" height="150"></canvas>
+        <div class="legend"><span style="color:var(--x)">voltage V</span></div>
+      </div>
+      <div>
+        <canvas id="ampChart" class="chart" width="600" height="150"></canvas>
+        <div class="legend"><span style="color:var(--y)">current A</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Compass</h2>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:1rem;align-items:center">
+      <canvas id="compass" width="200" height="200" title="The car points up; the orange marker is magnetic north. Heading: 0 deg facing north, increasing counterclockwise."></canvas>
+      <div>
+        <canvas id="magChart" class="chart" width="600" height="150"></canvas>
+        <div class="legend">Magnetic field uT: <span style="color:var(--x)">x</span><span style="color:var(--y)">y</span><span style="color:var(--z)">z</span></div>
+        <div class="readout" id="mag"></div>
+      </div>
+    </div>
+  </div>
+  <div class="card span3">
+    <h2>Dot matrix</h2>
+    <div class="matrixrow">
+      <div>
+        <div class="matrix" id="matrixEdit" title="Click or drag to toggle dots, then Send."></div>
+        <button onclick="sendMatrix()">Send (set_matrix)</button>
+        <button onclick="editMatrix(() => 0)">Clear</button>
+        <button onclick="editMatrix(v => 1 - v)">Invert</button>
+        <button onclick="editMatrix((v, i) => (Math.floor(i / 24) + i % 24) % 2)">Checkerboard</button>
+      </div>
+      <div>
+        <label>Text (show_text)<input type="text" id="matrixText" maxlength="255" value="Hello, RACECAR!"></label>
+        <button onclick="post('/text', { text: document.getElementById('matrixText').value })">Show text</button>
+        <div class="legend" style="margin-top:0.8rem">get_matrix(): the last frame sent with set_matrix</div>
+        <div class="matrix small" id="matrixState"></div>
+      </div>
+    </div>
+  </div>
+  <div class="card span3">
+    <h2>LED strip</h2>
+    <div class="legend">Click LEDs to paint them, then Send (set_pixels). LED 0 is the front-left end of the band; 83 the front-right end.</div>
+    <div class="ledrow">
+      <div class="ledbar" id="ledEdit"></div>
+      <div class="ledtools">
+        <label>Color <input type="color" id="ledColor" value="#00a0ff"></label>
+        <button onclick="sendLeds()">Send (set_pixels)</button>
+        <button onclick="editLeds(() => hexColor())">Fill</button>
+        <button onclick="editLeds((c, i) => hueColor(i))">Rainbow</button>
+        <button onclick="editLeds(() => [0, 0, 0])">Clear</button>
+      </div>
+    </div>
+    <div class="legend" style="margin-top:0.8rem">get_pixels(): the last colors set</div>
+    <div class="ledbar small" id="ledState"></div>
+  </div>
+  <div class="card span2">
+    <h2>Drive</h2>
+    <div class="pad" id="pad">
+      <div></div><button data-axis="fwd" data-val="1">&#9650;</button><div></div>
+      <button data-axis="turn" data-val="-1">&#9664;</button><div class="mid">WASD<br>or arrows</div><button data-axis="turn" data-val="1">&#9654;</button>
+      <div></div><button data-axis="fwd" data-val="-1">&#9660;</button><div></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Tune</h2>
+    <label>Speed command: <b id="speedVal"></b><input type="range" id="speed" min="0" max="1" step="0.05"></label>
+    <label>Steering command: <b id="angleVal"></b><input type="range" id="angle" min="0" max="1" step="0.05"></label>
+    <label>Max speed (rc.drive.set_max_speed): <b id="maxVal"></b><input type="range" id="max_speed" min="0" max="1" step="0.05"></label>
+  </div>
+</div>
+</main>
+<script>
+const held = { fwd: 0, turn: 0 };
+let lidarRange = 4, paramsLoaded = false;
+const FULL_SPEED = 4.0;  // m/s at speed 1 and max speed 1
+const XYZ = ['#EC8B48', '#7FC8A9', '#8FB3FF'];
+
+function post(path, body) {
+  return fetch(path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body || {}) }).catch(() => {});
+}
+function sendCmd() { post('/cmd', held); }
+function stopCar() { held.fwd = held.turn = 0; document.querySelectorAll('.pad button').forEach(b => b.classList.remove('down')); post('/stop'); }
+
+// Drive pad and keys: an axis is held while its button or key is down; posted on change and every 100 ms
+const keys = { w: ['fwd', 1], arrowup: ['fwd', 1], s: ['fwd', -1], arrowdown: ['fwd', -1], a: ['turn', -1], arrowleft: ['turn', -1], d: ['turn', 1], arrowright: ['turn', 1] };
+function setAxis(axis, val, down) {
+  if (down) held[axis] = val; else if (held[axis] === val) held[axis] = 0;
+  document.querySelectorAll(`.pad button[data-axis=${axis}]`).forEach(b => b.classList.toggle('down', held[axis] === +b.dataset.val));
+  sendCmd();
+}
+document.querySelectorAll('.pad button').forEach(b => {
+  b.addEventListener('pointerdown', e => { b.setPointerCapture(e.pointerId); setAxis(b.dataset.axis, +b.dataset.val, true); });
+  b.addEventListener('pointerup', () => setAxis(b.dataset.axis, +b.dataset.val, false));
+  b.addEventListener('pointercancel', () => setAxis(b.dataset.axis, +b.dataset.val, false));
+});
+addEventListener('keydown', e => { const k = keys[e.key.toLowerCase()]; if (k && !e.repeat && e.target.tagName !== 'INPUT') { e.preventDefault(); setAxis(k[0], k[1], true); } });
+addEventListener('keyup', e => { const k = keys[e.key.toLowerCase()]; if (k) setAxis(k[0], k[1], false); });
+addEventListener('blur', stopCar);
+setInterval(() => { if (held.fwd || held.turn) sendCmd(); }, 100);
+
+['speed', 'angle', 'max_speed'].forEach(id => document.getElementById(id).addEventListener('input', e => {
+  post('/params', { [id]: parseFloat(e.target.value) });
+}));
+
+const lidar = document.getElementById('lidar');
+lidar.addEventListener('wheel', e => { e.preventDefault(); lidarRange = Math.min(12, Math.max(0.5, lidarRange * (e.deltaY > 0 ? 1.15 : 0.87))); });
+
+function drawLidar(scan) {
+  const c = lidar.getContext('2d'), w = lidar.width, h = lidar.height, cx = w / 2, cy = h / 2, k = (w / 2 - 10) / lidarRange;
+  c.clearRect(0, 0, w, h);
+  c.strokeStyle = 'rgba(245,245,247,0.15)';
+  for (let r = 1; r <= lidarRange; r++) { c.beginPath(); c.arc(cx, cy, r * k, 0, 2 * Math.PI); c.stroke(); }
+  c.fillStyle = '#EC8B48';
+  for (const [deg, m] of scan) {
+    const a = deg * Math.PI / 180;
+    c.fillRect(cx + Math.sin(a) * m * k - 1.5, cy - Math.cos(a) * m * k - 1.5, 3, 3);
+  }
+  c.fillStyle = '#F5F5F7';
+  c.beginPath(); c.moveTo(cx, cy - 9); c.lineTo(cx - 6, cy + 7); c.lineTo(cx + 6, cy + 7); c.fill();
+  document.getElementById('lidarRange').textContent = lidarRange.toFixed(1);
+}
+
+// Line chart of hist columns over the last 10 s, autoscaled; includeZero keeps 0 in range
+function drawChart(id, hist, cols, colors, includeZero = true) {
+  const cv = document.getElementById(id), c = cv.getContext('2d'), w = cv.width, h = cv.height;
+  c.clearRect(0, 0, w, h);
+  if (hist.length < 2) return;
+  const t1 = hist[hist.length - 1][0], t0 = t1 - 10;
+  let lo = Infinity, hi = -Infinity;
+  for (const row of hist) for (const i of cols) { lo = Math.min(lo, row[i]); hi = Math.max(hi, row[i]); }
+  if (includeZero) { lo = Math.min(lo, 0); hi = Math.max(hi, 0); }
+  const pad = Math.max((hi - lo) * 0.1, 0.05); lo -= pad; hi += pad;
+  const x = t => (t - t0) / 10 * w, y = v => h - (v - lo) / (hi - lo) * h;
+  if (lo < 0 && hi > 0) { c.strokeStyle = 'rgba(245,245,247,0.25)'; c.beginPath(); c.moveTo(0, y(0)); c.lineTo(w, y(0)); c.stroke(); }
+  c.fillStyle = 'rgba(245,245,247,0.6)'; c.font = '11px sans-serif';
+  c.fillText(hi.toFixed(2), 4, 12); c.fillText(lo.toFixed(2), 4, h - 4);
+  cols.forEach((i, n) => {
+    c.strokeStyle = colors[n]; c.lineWidth = 1.5; c.beginPath();
+    hist.forEach((row, j) => j ? c.lineTo(x(row[0]), y(row[i])) : c.moveTo(x(row[0]), y(row[i])));
+    c.stroke();
+  });
+}
+
+// The car points up. Turning left by h degrees moves north h degrees clockwise on the dial.
+function drawCompass(heading) {
+  const cv = document.getElementById('compass'), c = cv.getContext('2d'), w = cv.width, r = w / 2 - 14;
+  c.clearRect(0, 0, w, w);
+  c.save();
+  c.translate(w / 2, w / 2);
+  c.strokeStyle = 'rgba(245,245,247,0.3)';
+  c.beginPath(); c.arc(0, 0, r, 0, 2 * Math.PI); c.stroke();
+  c.fillStyle = 'rgba(245,245,247,0.5)';
+  c.beginPath(); c.moveTo(0, -18); c.lineTo(-6, 10); c.lineTo(6, 10); c.fill();
+  c.rotate(heading * Math.PI / 180);
+  c.fillStyle = '#EC8B48';
+  c.beginPath(); c.moveTo(0, -r + 6); c.lineTo(-6, -r + 22); c.lineTo(6, -r + 22); c.fill();
+  c.font = 'bold 13px sans-serif'; c.textAlign = 'center';
+  c.fillText('N', 0, -r + 36);
+  c.restore();
+  c.fillStyle = '#F5F5F7'; c.font = '13px sans-serif'; c.textAlign = 'center';
+  c.fillText(heading.toFixed(1) + ' deg', w / 2, w - 4);
+}
+
+// Dot matrix editor: 192 cells, row-major; click or drag to toggle
+const matrixCells = new Array(192).fill(0);
+let dragValue = null;
+function buildMatrix(id, editable) {
+  const el = document.getElementById(id);
+  for (let i = 0; i < 192; i++) {
+    const dot = document.createElement('span');
+    if (editable) {
+      dot.addEventListener('pointerdown', e => { e.preventDefault(); dragValue = 1 - matrixCells[i]; setCell(i, dragValue); });
+      dot.addEventListener('pointerenter', () => { if (dragValue !== null) setCell(i, dragValue); });
+    }
+    el.appendChild(dot);
+  }
+}
+addEventListener('pointerup', () => { dragValue = null; });
+function setCell(i, v) { matrixCells[i] = v; document.getElementById('matrixEdit').children[i].classList.toggle('on', !!v); }
+function editMatrix(f) { for (let i = 0; i < 192; i++) setCell(i, f(matrixCells[i], i)); }
+function sendMatrix() { post('/matrix', { pixels: matrixCells }); }
+function showMatrixState(pixels) {
+  const dots = document.getElementById('matrixState').children;
+  for (let i = 0; i < 192 && i < pixels.length; i++) dots[i].classList.toggle('on', !!pixels[i]);
+}
+buildMatrix('matrixEdit', true);
+buildMatrix('matrixState', false);
+
+// LED strip editor: 84 colors, LED 0 first
+const ledColors = Array.from({ length: 84 }, () => [0, 0, 0]);
+let ledDrag = false;
+const rgb = c => `rgb(${c[0]},${c[1]},${c[2]})`;
+function hexColor() {
+  const h = document.getElementById('ledColor').value;
+  return [1, 3, 5].map(i => parseInt(h.substr(i, 2), 16));
+}
+function hueColor(i) {
+  const h = i / 84 * 6, x = 1 - Math.abs(h % 2 - 1);
+  const [r, g, b] = h < 1 ? [1, x, 0] : h < 2 ? [x, 1, 0] : h < 3 ? [0, 1, x] : h < 4 ? [0, x, 1] : h < 5 ? [x, 0, 1] : [1, 0, x];
+  return [r, g, b].map(v => Math.round(v * 255));
+}
+function setLed(i, c) { ledColors[i] = c; document.getElementById('ledEdit').children[i].style.background = rgb(c); }
+function editLeds(f) { for (let i = 0; i < 84; i++) setLed(i, f(ledColors[i], i)); }
+function sendLeds() { post('/leds', { colors: ledColors }); }
+function buildLeds(id, editable) {
+  const el = document.getElementById(id);
+  for (let i = 0; i < 84; i++) {
+    const led = document.createElement('span');
+    led.title = `LED ${i}`;
+    if (editable) {
+      led.addEventListener('pointerdown', e => { e.preventDefault(); ledDrag = true; setLed(i, hexColor()); });
+      led.addEventListener('pointerenter', () => { if (ledDrag) setLed(i, hexColor()); });
+    }
+    el.appendChild(led);
+  }
+}
+addEventListener('pointerup', () => { ledDrag = false; });
+function showLedState(colors) {
+  const leds = document.getElementById('ledState').children;
+  for (let i = 0; i < 84 && i < colors.length; i++) leds[i].style.background = rgb(colors[i]);
+}
+buildLeds('ledEdit', true);
+buildLeds('ledState', false);
+
+const fmt = v => v.map(n => (n >= 0 ? ' ' : '') + n.toFixed(3)).join('  ');
+
+async function poll() {
+  try {
+    const s = await (await fetch('/state', { cache: 'no-store' })).json();
+    const st = document.getElementById('state');
+    if (!s.running) { st.className = 'state offline'; st.textContent = 'Waiting for user program mode'; return; }
+    if (!paramsLoaded) {
+      for (const id of ['speed', 'angle', 'max_speed']) document.getElementById(id).value = s[id];
+      paramsLoaded = true;
+    }
+    document.getElementById('speedVal').textContent = s.speed.toFixed(2);
+    document.getElementById('angleVal').textContent = s.angle.toFixed(2);
+    document.getElementById('maxVal').textContent = s.max_speed.toFixed(2) + ` (speed 1 = ${(s.max_speed * FULL_SPEED).toFixed(1)} m/s)`;
+    document.getElementById('fps').textContent = s.fps;
+    document.getElementById('speedCmd').textContent = s.speed_cmd.toFixed(2);
+    document.getElementById('steer').textContent = s.angle_cmd.toFixed(2);
+    document.getElementById('enc').textContent = s.encoder.toFixed(2);
+    st.className = 'state' + (s.timed_out ? ' timeout' : s.held ? ' moving' : '');
+    st.textContent = s.timed_out ? 'Command timed out' : `${s.encoder.toFixed(2)} m/s` + (s.held ? ` (target ${s.target.toFixed(2)})` : '');
+    drawLidar(s.scan);
+    drawChart('encChart', s.hist, [1, 2], ['#F5F5F7', '#EC8B48']);
+    drawChart('accChart', s.hist, [3, 4, 5], XYZ);
+    drawChart('gyroChart', s.hist, [6, 7, 8], XYZ);
+    document.getElementById('battery').textContent = `${s.volts.toFixed(2)} V | ${s.amps.toFixed(2)} A`;
+    drawChart('voltChart', s.hist, [9], ['#EC8B48'], false);
+    drawChart('ampChart', s.hist, [10], ['#7FC8A9']);
+    drawChart('magChart', s.hist, [11, 12, 13], XYZ);
+    drawCompass(s.heading);
+    showMatrixState(s.matrix);
+    showLedState(s.leds);
+    const norm = Math.hypot(s.mag[0], s.mag[1], s.mag[2]);
+    document.getElementById('mag').textContent = `field ${s.mag.map(v => v.toFixed(2)).join('  ')} uT  |B| ${norm.toFixed(2)}\nheading ${s.heading.toFixed(1)} deg`;
+    document.getElementById('imu').textContent = `accel ${fmt(s.accel)}\ngyro  ${fmt(s.gyro)}`;
+  } catch (e) {
+    const st = document.getElementById('state');
+    st.className = 'state offline'; st.textContent = 'Dashboard offline';
+  }
+}
+setInterval(poll, 100);
+setInterval(() => {
+  const t = Date.now();
+  document.getElementById('color').src = '/color?' + t;
+  document.getElementById('depth').src = '/depth?' + t;
+}, 100);
+</script>
+</body>
+</html>

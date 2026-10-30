@@ -1,0 +1,613 @@
+[2026-10-24 18:20:47] ========== SETUP LOG START ==========
+[2026-10-24 18:20:47] Date: Sat Oct 24 06:20:47 PM PDT 2026
+[2026-10-24 18:20:47] User: sixian
+[2026-10-24 18:20:47] Home: /home/sixian
+[2026-10-24 18:20:47] Shell: /bin/bash
+[2026-10-24 18:20:47] Kernel: Linux sixian-ubuntu1 7.0.0-34-generic #34~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 15:38:29 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+[2026-10-24 18:20:47] SCRIPT_DIR: /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts
+[2026-10-24 18:20:47] RACECAR_DIR: /home/sixian/Documents/racecar-neo-installer/racecar-student
+[2026-10-24 18:20:47] NEO_DIR: /home/sixian/Documents/racecar-neo-installer
+[2026-10-24 18:20:47] ======================================
+[2026-10-24 18:20:47] Welcome to the RACECAR Neo command-line installer for Windows, Mac, and Linux.
+[2026-10-24 18:20:47] Setup log: /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/.logs/setup_2026-10-24_18-20-47.log
+[2026-10-24 18:20:47] [1/4] Select your operating system: [windows, mac, linux]
+[2026-10-24 18:20:50] Platform selected: linux
+[2026-10-24 18:20:50] [2/4] Select your course curriculum: [oneshot, outreach, prereq, mites]
+[2026-10-24 18:20:53] Curriculum selected: outreach
+[2026-10-24 18:20:53] [3/4] Cloning simulator, library, and labs in parallel...
+[2026-10-24 18:20:53] Clone targets: sim → /home/sixian/Documents/racecar-neo-installer/RacecarNeo-Simulator, lib → /home/sixian/Documents/racecar-neo-installer/racecar-student/racecar-neo-library, labs → /home/sixian/Documents/racecar-neo-installer/racecar-student/racecar-neo-outreach-labs
+[2026-10-24 18:21:05] ----- .clone_sim.tmp -----
+Cloning into '/home/sixian/Documents/racecar-neo-installer/RacecarNeo-Simulator'...
+remote: Enumerating objects: 446, done.        
+remote: Counting objects:   0% (1/446)        remote: Counting objects:   1% (5/446)        remote: Counting objects:   2% (9/446)        remote: Counting objects:   3% (14/446)        remote: Counting objects:   4% (18/446)        remote: Counting objects:   5% (23/446)        remote: Counting objects:   6% (27/446)        remote: Counting objects:   7% (32/446)        remote: Counting objects:   8% (36/446)        remote: Counting objects:   9% (41/446)        remote: Counting objects:  10% (45/446)        remote: Counting objects:  11% (50/446)        remote: Counting objects:  12% (54/446)        remote: Counting objects:  13% (58/446)        remote: Counting objects:  14% (63/446)        remote: Counting objects:  15% (67/446)        remote: Counting objects:  16% (72/446)        remote: Counting objects:  17% (76/446)        remote: Counting objects:  18% (81/446)        remote: Counting objects:  19% (85/446)        remote: Counting objects:  20% (90/446)        remote: Counting objects:  21% (94/446)        remote: Counting objects:  22% (99/446)        remote: Counting objects:  23% (103/446)        remote: Counting objects:  24% (108/446)        remote: Counting objects:  25% (112/446)        remote: Counting objects:  26% (116/446)        remote: Counting objects:  27% (121/446)        remote: Counting objects:  28% (125/446)        remote: Counting objects:  29% (130/446)        remote: Counting objects:  30% (134/446)        remote: Counting objects:  31% (139/446)        remote: Counting objects:  32% (143/446)        remote: Counting objects:  33% (148/446)        remote: Counting objects:  34% (152/446)        remote: Counting objects:  35% (157/446)        remote: Counting objects:  36% (161/446)        remote: Counting objects:  37% (166/446)        remote: Counting objects:  38% (170/446)        remote: Counting objects:  39% (174/446)        remote: Counting objects:  40% (179/446)        remote: Counting objects:  41% (183/446)        remote: Counting objects:  42% (188/446)        remote: Counting objects:  43% (192/446)        remote: Counting objects:  44% (197/446)        remote: Counting objects:  45% (201/446)        remote: Counting objects:  46% (206/446)        remote: Counting objects:  47% (210/446)        remote: Counting objects:  48% (215/446)        remote: Counting objects:  49% (219/446)        remote: Counting objects:  50% (223/446)        remote: Counting objects:  51% (228/446)        remote: Counting objects:  52% (232/446)        remote: Counting objects:  53% (237/446)        remote: Counting objects:  54% (241/446)        remote: Counting objects:  55% (246/446)        remote: Counting objects:  56% (250/446)        remote: Counting objects:  57% (255/446)        remote: Counting objects:  58% (259/446)        remote: Counting objects:  59% (264/446)        remote: Counting objects:  60% (268/446)        remote: Counting objects:  61% (273/446)        remote: Counting objects:  62% (277/446)        remote: Counting objects:  63% (281/446)        remote: Counting objects:  64% (286/446)        remote: Counting objects:  65% (290/446)        remote: Counting objects:  66% (295/446)        remote: Counting objects:  67% (299/446)        remote: Counting objects:  68% (304/446)        remote: Counting objects:  69% (308/446)        remote: Counting objects:  70% (313/446)        remote: Counting objects:  71% (317/446)        remote: Counting objects:  72% (322/446)        remote: Counting objects:  73% (326/446)        remote: Counting objects:  74% (331/446)        remote: Counting objects:  75% (335/446)        remote: Counting objects:  76% (339/446)        remote: Counting objects:  77% (344/446)        remote: Counting objects:  78% (348/446)        remote: Counting objects:  79% (353/446)        remote: Counting objects:  80% (357/446)        remote: Counting objects:  81% (362/446)        remote: Counting objects:  82% (366/446)        remote: Counting objects:  83% (371/446)        remote: Counting objects:  84% (375/446)        remote: Counting objects:  85% (380/446)        remote: Counting objects:  86% (384/446)        remote: Counting objects:  87% (389/446)        remote: Counting objects:  88% (393/446)        remote: Counting objects:  89% (397/446)        remote: Counting objects:  90% (402/446)        remote: Counting objects:  91% (406/446)        remote: Counting objects:  92% (411/446)        remote: Counting objects:  93% (415/446)        remote: Counting objects:  94% (420/446)        remote: Counting objects:  95% (424/446)        remote: Counting objects:  96% (429/446)        remote: Counting objects:  97% (433/446)        remote: Counting objects:  98% (438/446)        remote: Counting objects:  99% (442/446)        remote: Counting objects: 100% (446/446)        remote: Counting objects: 100% (446/446), done.        
+remote: Compressing objects:   0% (1/272)        remote: Compressing objects:   1% (3/272)        remote: Compressing objects:   2% (6/272)        remote: Compressing objects:   3% (9/272)        remote: Compressing objects:   4% (11/272)        remote: Compressing objects:   5% (14/272)        remote: Compressing objects:   6% (17/272)        remote: Compressing objects:   7% (20/272)        remote: Compressing objects:   8% (22/272)        remote: Compressing objects:   9% (25/272)        remote: Compressing objects:  10% (28/272)        remote: Compressing objects:  10% (29/272)        remote: Compressing objects:  11% (30/272)        remote: Compressing objects:  12% (33/272)        remote: Compressing objects:  13% (36/272)        remote: Compressing objects:  14% (39/272)        remote: Compressing objects:  15% (41/272)        remote: Compressing objects:  16% (44/272)        remote: Compressing objects:  17% (47/272)        remote: Compressing objects:  18% (49/272)        remote: Compressing objects:  19% (52/272)        remote: Compressing objects:  20% (55/272)        remote: Compressing objects:  21% (58/272)        remote: Compressing objects:  22% (60/272)        remote: Compressing objects:  23% (63/272)        remote: Compressing objects:  24% (66/272)        remote: Compressing objects:  25% (68/272)        remote: Compressing objects:  26% (71/272)        remote: Compressing objects:  27% (74/272)        remote: Compressing objects:  28% (77/272)        remote: Compressing objects:  29% (79/272)        remote: Compressing objects:  30% (82/272)        remote: Compressing objects:  31% (85/272)        remote: Compressing objects:  32% (88/272)        remote: Compressing objects:  33% (90/272)        remote: Compressing objects:  34% (93/272)        remote: Compressing objects:  35% (96/272)        remote: Compressing objects:  36% (98/272)        remote: Compressing objects:  37% (101/272)        remote: Compressing objects:  38% (104/272)        remote: Compressing objects:  39% (107/272)        remote: Compressing objects:  40% (109/272)        remote: Compressing objects:  41% (112/272)        remote: Compressing objects:  42% (115/272)        remote: Compressing objects:  43% (117/272)        remote: Compressing objects:  44% (120/272)        remote: Compressing objects:  45% (123/272)        remote: Compressing objects:  46% (126/272)        remote: Compressing objects:  47% (128/272)        remote: Compressing objects:  48% (131/272)        remote: Compressing objects:  49% (134/272)        remote: Compressing objects:  50% (136/272)        remote: Compressing objects:  51% (139/272)        remote: Compressing objects:  52% (142/272)        remote: Compressing objects:  53% (145/272)        remote: Compressing objects:  54% (147/272)        remote: Compressing objects:  55% (150/272)        remote: Compressing objects:  56% (153/272)        remote: Compressing objects:  57% (156/272)        remote: Compressing objects:  58% (158/272)        remote: Compressing objects:  59% (161/272)        remote: Compressing objects:  60% (164/272)        remote: Compressing objects:  61% (166/272)        remote: Compressing objects:  62% (169/272)        remote: Compressing objects:  63% (172/272)        remote: Compressing objects:  64% (175/272)        remote: Compressing objects:  65% (177/272)        remote: Compressing objects:  66% (180/272)        remote: Compressing objects:  67% (183/272)        remote: Compressing objects:  68% (185/272)        remote: Compressing objects:  69% (188/272)        remote: Compressing objects:  70% (191/272)        remote: Compressing objects:  71% (194/272)        remote: Compressing objects:  72% (196/272)        remote: Compressing objects:  73% (199/272)        remote: Compressing objects:  74% (202/272)        remote: Compressing objects:  75% (204/272)        remote: Compressing objects:  76% (207/272)        remote: Compressing objects:  77% (210/272)        remote: Compressing objects:  78% (213/272)        remote: Compressing objects:  79% (215/272)        remote: Compressing objects:  80% (218/272)        remote: Compressing objects:  81% (221/272)        remote: Compressing objects:  82% (224/272)        remote: Compressing objects:  83% (226/272)        remote: Compressing objects:  84% (229/272)        remote: Compressing objects:  85% (232/272)        remote: Compressing objects:  86% (234/272)        remote: Compressing objects:  87% (237/272)        remote: Compressing objects:  88% (240/272)        remote: Compressing objects:  89% (243/272)        remote: Compressing objects:  90% (245/272)        remote: Compressing objects:  91% (248/272)        remote: Compressing objects:  92% (251/272)        remote: Compressing objects:  93% (253/272)        remote: Compressing objects:  94% (256/272)        remote: Compressing objects:  95% (259/272)        remote: Compressing objects:  96% (262/272)        remote: Compressing objects:  97% (264/272)        remote: Compressing objects:  98% (267/272)        remote: Compressing objects:  99% (270/272)        remote: Compressing objects: 100% (272/272)        remote: Compressing objects: 100% (272/272), done.        
+Receiving objects:   0% (1/446)Receiving objects:   1% (5/446)Receiving objects:   2% (9/446)Receiving objects:   3% (14/446)Receiving objects:   4% (18/446)Receiving objects:   5% (23/446)Receiving objects:   6% (27/446)Receiving objects:   7% (32/446)Receiving objects:   8% (36/446)Receiving objects:   9% (41/446)Receiving objects:  10% (45/446)Receiving objects:  11% (50/446)Receiving objects:  12% (54/446)Receiving objects:  13% (58/446)Receiving objects:  14% (63/446)Receiving objects:  15% (67/446)Receiving objects:  16% (72/446)Receiving objects:  17% (76/446)Receiving objects:  18% (81/446)Receiving objects:  19% (85/446)Receiving objects:  20% (90/446)Receiving objects:  21% (94/446)Receiving objects:  22% (99/446)Receiving objects:  23% (103/446)Receiving objects:  24% (108/446)Receiving objects:  25% (112/446)Receiving objects:  26% (116/446)Receiving objects:  27% (121/446)Receiving objects:  28% (125/446)Receiving objects:  29% (130/446)Receiving objects:  30% (134/446)Receiving objects:  31% (139/446)Receiving objects:  32% (143/446)Receiving objects:  33% (148/446)Receiving objects:  34% (152/446)Receiving objects:  35% (157/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  36% (161/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  37% (166/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  38% (170/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  39% (174/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  40% (179/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  41% (183/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  42% (188/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  43% (192/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  44% (197/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  45% (201/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  46% (206/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  47% (210/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  48% (215/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  49% (219/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  50% (223/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  51% (228/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  52% (232/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  53% (237/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  54% (241/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  55% (246/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  56% (250/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  57% (255/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  58% (259/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  59% (264/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  60% (268/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  61% (273/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  62% (277/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  63% (281/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  64% (286/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  65% (290/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  66% (295/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  67% (299/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  68% (304/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  69% (308/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  70% (313/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  71% (317/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  72% (322/446), 10.39 MiB | 16.87 MiB/sReceiving objects:  72% (323/446), 29.57 MiB | 17.46 MiB/sReceiving objects:  73% (326/446), 29.57 MiB | 17.46 MiB/sReceiving objects:  74% (331/446), 29.57 MiB | 17.46 MiB/sReceiving objects:  75% (335/446), 29.57 MiB | 17.46 MiB/sReceiving objects:  75% (338/446), 29.57 MiB | 17.46 MiB/sReceiving objects:  76% (339/446), 29.57 MiB | 17.46 MiB/sReceiving objects:  77% (344/446), 29.57 MiB | 17.46 MiB/sReceiving objects:  78% (348/446), 37.28 MiB | 16.96 MiB/sReceiving objects:  79% (353/446), 37.28 MiB | 16.96 MiB/sReceiving objects:  80% (357/446), 37.28 MiB | 16.96 MiB/sReceiving objects:  80% (361/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  81% (362/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  82% (366/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  83% (371/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  84% (375/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  85% (380/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  86% (384/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  87% (389/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  88% (393/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  89% (397/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  90% (402/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  91% (406/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  92% (411/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  93% (415/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  94% (420/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  95% (424/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  96% (429/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  97% (433/446), 38.32 MiB | 12.38 MiB/sReceiving objects:  97% (437/446), 47.80 MiB | 8.21 MiB/s Receiving objects:  98% (438/446), 47.80 MiB | 8.21 MiB/sReceiving objects:  98% (439/446), 47.80 MiB | 8.21 MiB/sReceiving objects:  99% (442/446), 47.80 MiB | 8.21 MiB/sremote: Total 446 (delta 279), reused 270 (delta 169), pack-reused 0 (from 0)        
+Receiving objects: 100% (446/446), 82.21 MiB | 13.01 MiB/sReceiving objects: 100% (446/446), 91.00 MiB | 14.11 MiB/s, done.
+Resolving deltas:   0% (0/279)Resolving deltas:   1% (3/279)Resolving deltas:   2% (6/279)Resolving deltas:   4% (12/279)Resolving deltas:   6% (18/279)Resolving deltas:   7% (20/279)Resolving deltas:   8% (23/279)Resolving deltas:   9% (26/279)Resolving deltas:  10% (28/279)Resolving deltas:  11% (31/279)Resolving deltas:  12% (34/279)Resolving deltas:  13% (37/279)Resolving deltas:  14% (40/279)Resolving deltas:  15% (42/279)Resolving deltas:  16% (46/279)Resolving deltas:  18% (52/279)Resolving deltas:  19% (55/279)Resolving deltas:  20% (56/279)Resolving deltas:  21% (59/279)Resolving deltas:  23% (66/279)Resolving deltas:  24% (67/279)Resolving deltas:  25% (70/279)Resolving deltas:  26% (75/279)Resolving deltas:  27% (77/279)Resolving deltas:  28% (80/279)Resolving deltas:  29% (81/279)Resolving deltas:  30% (84/279)Resolving deltas:  31% (87/279)Resolving deltas:  32% (91/279)Resolving deltas:  34% (96/279)Resolving deltas:  35% (98/279)Resolving deltas:  36% (101/279)Resolving deltas:  37% (104/279)Resolving deltas:  38% (107/279)Resolving deltas:  39% (111/279)Resolving deltas:  40% (112/279)Resolving deltas:  41% (115/279)Resolving deltas:  42% (118/279)Resolving deltas:  44% (124/279)Resolving deltas:  45% (128/279)Resolving deltas:  46% (129/279)Resolving deltas:  47% (132/279)Resolving deltas:  48% (134/279)Resolving deltas:  49% (137/279)Resolving deltas:  50% (142/279)Resolving deltas:  51% (143/279)Resolving deltas:  53% (149/279)Resolving deltas:  54% (151/279)Resolving deltas:  55% (154/279)Resolving deltas:  56% (157/279)Resolving deltas:  57% (160/279)Resolving deltas:  58% (162/279)Resolving deltas:  59% (165/279)Resolving deltas:  60% (168/279)Resolving deltas:  61% (172/279)Resolving deltas:  62% (173/279)Resolving deltas:  63% (176/279)Resolving deltas:  64% (179/279)Resolving deltas:  65% (182/279)Resolving deltas:  66% (185/279)Resolving deltas:  67% (187/279)Resolving deltas:  68% (190/279)Resolving deltas:  69% (193/279)Resolving deltas:  70% (196/279)Resolving deltas:  71% (199/279)Resolving deltas:  72% (201/279)Resolving deltas:  73% (204/279)Resolving deltas:  74% (207/279)Resolving deltas:  75% (210/279)Resolving deltas:  76% (213/279)Resolving deltas:  77% (215/279)Resolving deltas:  78% (218/279)Resolving deltas:  79% (221/279)Resolving deltas:  80% (224/279)Resolving deltas:  81% (226/279)Resolving deltas:  82% (230/279)Resolving deltas:  83% (232/279)Resolving deltas:  84% (235/279)Resolving deltas:  85% (238/279)Resolving deltas:  86% (240/279)Resolving deltas:  87% (243/279)Resolving deltas:  88% (246/279)Resolving deltas:  89% (249/279)Resolving deltas:  90% (252/279)Resolving deltas:  91% (255/279)Resolving deltas:  92% (257/279)Resolving deltas:  93% (260/279)Resolving deltas:  94% (263/279)Resolving deltas:  95% (267/279)Resolving deltas:  96% (270/279)Resolving deltas:  97% (271/279)Resolving deltas:  98% (274/279)Resolving deltas:  99% (277/279)Resolving deltas: 100% (279/279)Resolving deltas: 100% (279/279), done.
+[2026-10-24 18:21:05] ----- .clone_lib.tmp -----
+Cloning into '/home/sixian/Documents/racecar-neo-installer/racecar-student/racecar-neo-library'...
+remote: Enumerating objects: 73, done.        
+remote: Counting objects:   1% (1/73)        remote: Counting objects:   2% (2/73)        remote: Counting objects:   4% (3/73)        remote: Counting objects:   5% (4/73)        remote: Counting objects:   6% (5/73)        remote: Counting objects:   8% (6/73)        remote: Counting objects:   9% (7/73)        remote: Counting objects:  10% (8/73)        remote: Counting objects:  12% (9/73)        remote: Counting objects:  13% (10/73)        remote: Counting objects:  15% (11/73)        remote: Counting objects:  16% (12/73)        remote: Counting objects:  17% (13/73)        remote: Counting objects:  19% (14/73)        remote: Counting objects:  20% (15/73)        remote: Counting objects:  21% (16/73)        remote: Counting objects:  23% (17/73)        remote: Counting objects:  24% (18/73)        remote: Counting objects:  26% (19/73)        remote: Counting objects:  27% (20/73)        remote: Counting objects:  28% (21/73)        remote: Counting objects:  30% (22/73)        remote: Counting objects:  31% (23/73)        remote: Counting objects:  32% (24/73)        remote: Counting objects:  34% (25/73)        remote: Counting objects:  35% (26/73)        remote: Counting objects:  36% (27/73)        remote: Counting objects:  38% (28/73)        remote: Counting objects:  39% (29/73)        remote: Counting objects:  41% (30/73)        remote: Counting objects:  42% (31/73)        remote: Counting objects:  43% (32/73)        remote: Counting objects:  45% (33/73)        remote: Counting objects:  46% (34/73)        remote: Counting objects:  47% (35/73)        remote: Counting objects:  49% (36/73)        remote: Counting objects:  50% (37/73)        remote: Counting objects:  52% (38/73)        remote: Counting objects:  53% (39/73)        remote: Counting objects:  54% (40/73)        remote: Counting objects:  56% (41/73)        remote: Counting objects:  57% (42/73)        remote: Counting objects:  58% (43/73)        remote: Counting objects:  60% (44/73)        remote: Counting objects:  61% (45/73)        remote: Counting objects:  63% (46/73)        remote: Counting objects:  64% (47/73)        remote: Counting objects:  65% (48/73)        remote: Counting objects:  67% (49/73)        remote: Counting objects:  68% (50/73)        remote: Counting objects:  69% (51/73)        remote: Counting objects:  71% (52/73)        remote: Counting objects:  72% (53/73)        remote: Counting objects:  73% (54/73)        remote: Counting objects:  75% (55/73)        remote: Counting objects:  76% (56/73)        remote: Counting objects:  78% (57/73)        remote: Counting objects:  79% (58/73)        remote: Counting objects:  80% (59/73)        remote: Counting objects:  82% (60/73)        remote: Counting objects:  83% (61/73)        remote: Counting objects:  84% (62/73)        remote: Counting objects:  86% (63/73)        remote: Counting objects:  87% (64/73)        remote: Counting objects:  89% (65/73)        remote: Counting objects:  90% (66/73)        remote: Counting objects:  91% (67/73)        remote: Counting objects:  93% (68/73)        remote: Counting objects:  94% (69/73)        remote: Counting objects:  95% (70/73)        remote: Counting objects:  97% (71/73)        remote: Counting objects:  98% (72/73)        remote: Counting objects: 100% (73/73)        remote: Counting objects: 100% (73/73), done.        
+remote: Compressing objects:   1% (1/71)        remote: Compressing objects:   2% (2/71)        remote: Compressing objects:   4% (3/71)        remote: Compressing objects:   5% (4/71)        remote: Compressing objects:   7% (5/71)        remote: Compressing objects:   8% (6/71)        remote: Compressing objects:   9% (7/71)        remote: Compressing objects:  11% (8/71)        remote: Compressing objects:  12% (9/71)        remote: Compressing objects:  14% (10/71)        remote: Compressing objects:  15% (11/71)        remote: Compressing objects:  16% (12/71)        remote: Compressing objects:  18% (13/71)        remote: Compressing objects:  19% (14/71)        remote: Compressing objects:  21% (15/71)        remote: Compressing objects:  22% (16/71)        remote: Compressing objects:  23% (17/71)        remote: Compressing objects:  25% (18/71)        remote: Compressing objects:  26% (19/71)        remote: Compressing objects:  28% (20/71)        remote: Compressing objects:  29% (21/71)        remote: Compressing objects:  30% (22/71)        remote: Compressing objects:  32% (23/71)        remote: Compressing objects:  33% (24/71)        remote: Compressing objects:  35% (25/71)        remote: Compressing objects:  36% (26/71)        remote: Compressing objects:  38% (27/71)        remote: Compressing objects:  39% (28/71)        remote: Compressing objects:  40% (29/71)        remote: Compressing objects:  42% (30/71)        remote: Compressing objects:  43% (31/71)        remote: Compressing objects:  45% (32/71)        remote: Compressing objects:  46% (33/71)        remote: Compressing objects:  47% (34/71)        remote: Compressing objects:  49% (35/71)        remote: Compressing objects:  50% (36/71)        remote: Compressing objects:  52% (37/71)        remote: Compressing objects:  53% (38/71)        remote: Compressing objects:  54% (39/71)        remote: Compressing objects:  56% (40/71)        remote: Compressing objects:  57% (41/71)        remote: Compressing objects:  59% (42/71)        remote: Compressing objects:  60% (43/71)        remote: Compressing objects:  61% (44/71)        remote: Compressing objects:  63% (45/71)        remote: Compressing objects:  64% (46/71)        remote: Compressing objects:  66% (47/71)        remote: Compressing objects:  67% (48/71)        remote: Compressing objects:  69% (49/71)        remote: Compressing objects:  70% (50/71)        remote: Compressing objects:  71% (51/71)        remote: Compressing objects:  73% (52/71)        remote: Compressing objects:  74% (53/71)        remote: Compressing objects:  76% (54/71)        remote: Compressing objects:  77% (55/71)        remote: Compressing objects:  78% (56/71)        remote: Compressing objects:  80% (57/71)        remote: Compressing objects:  81% (58/71)        remote: Compressing objects:  83% (59/71)        remote: Compressing objects:  84% (60/71)        remote: Compressing objects:  85% (61/71)        remote: Compressing objects:  87% (62/71)        remote: Compressing objects:  88% (63/71)        remote: Compressing objects:  90% (64/71)        remote: Compressing objects:  91% (65/71)        remote: Compressing objects:  92% (66/71)        remote: Compressing objects:  94% (67/71)        remote: Compressing objects:  95% (68/71)        remote: Compressing objects:  97% (69/71)        remote: Compressing objects:  98% (70/71)        remote: Compressing objects: 100% (71/71)        remote: Compressing objects: 100% (71/71), done.        
+Receiving objects:   1% (1/73)Receiving objects:   2% (2/73)Receiving objects:   4% (3/73)Receiving objects:   5% (4/73)Receiving objects:   6% (5/73)Receiving objects:   8% (6/73)Receiving objects:   9% (7/73)Receiving objects:  10% (8/73)Receiving objects:  12% (9/73)Receiving objects:  13% (10/73)Receiving objects:  15% (11/73)Receiving objects:  16% (12/73)Receiving objects:  17% (13/73)Receiving objects:  19% (14/73)Receiving objects:  20% (15/73)Receiving objects:  21% (16/73)Receiving objects:  23% (17/73)Receiving objects:  24% (18/73)Receiving objects:  26% (19/73)Receiving objects:  27% (20/73)Receiving objects:  28% (21/73)Receiving objects:  30% (22/73)Receiving objects:  31% (23/73)Receiving objects:  32% (24/73)Receiving objects:  34% (25/73)Receiving objects:  35% (26/73)Receiving objects:  36% (27/73)Receiving objects:  38% (28/73)Receiving objects:  39% (29/73)Receiving objects:  41% (30/73)Receiving objects:  42% (31/73)Receiving objects:  43% (32/73)Receiving objects:  45% (33/73)Receiving objects:  46% (34/73)Receiving objects:  47% (35/73)Receiving objects:  49% (36/73)Receiving objects:  50% (37/73)Receiving objects:  52% (38/73)Receiving objects:  53% (39/73)Receiving objects:  54% (40/73)Receiving objects:  56% (41/73)Receiving objects:  57% (42/73)Receiving objects:  58% (43/73)Receiving objects:  60% (44/73)Receiving objects:  61% (45/73)Receiving objects:  63% (46/73)Receiving objects:  64% (47/73)Receiving objects:  65% (48/73)Receiving objects:  67% (49/73)Receiving objects:  68% (50/73)Receiving objects:  69% (51/73)remote: Total 73 (delta 1), reused 40 (delta 0), pack-reused 0 (from 0)        
+Receiving objects:  71% (52/73)Receiving objects:  72% (53/73)Receiving objects:  73% (54/73)Receiving objects:  75% (55/73)Receiving objects:  76% (56/73)Receiving objects:  78% (57/73)Receiving objects:  79% (58/73)Receiving objects:  80% (59/73)Receiving objects:  82% (60/73)Receiving objects:  83% (61/73)Receiving objects:  84% (62/73)Receiving objects:  86% (63/73)Receiving objects:  87% (64/73)Receiving objects:  89% (65/73)Receiving objects:  90% (66/73)Receiving objects:  91% (67/73)Receiving objects:  93% (68/73)Receiving objects:  94% (69/73)Receiving objects:  95% (70/73)Receiving objects:  97% (71/73)Receiving objects:  98% (72/73)Receiving objects: 100% (73/73)Receiving objects: 100% (73/73), 83.22 KiB | 2.31 MiB/s, done.
+Resolving deltas:   0% (0/1)Resolving deltas: 100% (1/1)Resolving deltas: 100% (1/1), done.
+[2026-10-24 18:21:05] ----- .clone_labs.tmp -----
+Cloning into '/home/sixian/Documents/racecar-neo-installer/racecar-student/racecar-neo-outreach-labs'...
+remote: Enumerating objects: 37, done.        
+remote: Counting objects:   2% (1/37)        remote: Counting objects:   5% (2/37)        remote: Counting objects:   8% (3/37)        remote: Counting objects:  10% (4/37)        remote: Counting objects:  13% (5/37)        remote: Counting objects:  16% (6/37)        remote: Counting objects:  18% (7/37)        remote: Counting objects:  21% (8/37)        remote: Counting objects:  24% (9/37)        remote: Counting objects:  27% (10/37)        remote: Counting objects:  29% (11/37)        remote: Counting objects:  32% (12/37)        remote: Counting objects:  35% (13/37)        remote: Counting objects:  37% (14/37)        remote: Counting objects:  40% (15/37)        remote: Counting objects:  43% (16/37)        remote: Counting objects:  45% (17/37)        remote: Counting objects:  48% (18/37)        remote: Counting objects:  51% (19/37)        remote: Counting objects:  54% (20/37)        remote: Counting objects:  56% (21/37)        remote: Counting objects:  59% (22/37)        remote: Counting objects:  62% (23/37)        remote: Counting objects:  64% (24/37)        remote: Counting objects:  67% (25/37)        remote: Counting objects:  70% (26/37)        remote: Counting objects:  72% (27/37)        remote: Counting objects:  75% (28/37)        remote: Counting objects:  78% (29/37)        remote: Counting objects:  81% (30/37)        remote: Counting objects:  83% (31/37)        remote: Counting objects:  86% (32/37)        remote: Counting objects:  89% (33/37)        remote: Counting objects:  91% (34/37)        remote: Counting objects:  94% (35/37)        remote: Counting objects:  97% (36/37)        remote: Counting objects: 100% (37/37)        remote: Counting objects: 100% (37/37), done.        
+remote: Compressing objects:   3% (1/27)        remote: Compressing objects:   7% (2/27)        remote: Compressing objects:  11% (3/27)        remote: Compressing objects:  14% (4/27)        remote: Compressing objects:  18% (5/27)        remote: Compressing objects:  22% (6/27)        remote: Compressing objects:  25% (7/27)        remote: Compressing objects:  29% (8/27)        remote: Compressing objects:  33% (9/27)        remote: Compressing objects:  37% (10/27)        remote: Compressing objects:  40% (11/27)        remote: Compressing objects:  44% (12/27)        remote: Compressing objects:  48% (13/27)        remote: Compressing objects:  51% (14/27)        remote: Compressing objects:  55% (15/27)        remote: Compressing objects:  59% (16/27)        remote: Compressing objects:  62% (17/27)        remote: Compressing objects:  66% (18/27)        remote: Compressing objects:  70% (19/27)        remote: Compressing objects:  74% (20/27)        remote: Compressing objects:  77% (21/27)        remote: Compressing objects:  81% (22/27)        remote: Compressing objects:  85% (23/27)        remote: Compressing objects:  88% (24/27)        remote: Compressing objects:  92% (25/27)        remote: Compressing objects:  96% (26/27)        remote: Compressing objects: 100% (27/27)        remote: Compressing objects: 100% (27/27), done.        
+Receiving objects:   2% (1/37)Receiving objects:   5% (2/37)Receiving objects:   8% (3/37)Receiving objects:  10% (4/37)Receiving objects:  13% (5/37)Receiving objects:  16% (6/37)Receiving objects:  18% (7/37)Receiving objects:  21% (8/37)Receiving objects:  24% (9/37)Receiving objects:  27% (10/37)Receiving objects:  29% (11/37)Receiving objects:  32% (12/37)Receiving objects:  35% (13/37)Receiving objects:  37% (14/37)Receiving objects:  40% (15/37)Receiving objects:  43% (16/37)Receiving objects:  45% (17/37)Receiving objects:  48% (18/37)Receiving objects:  51% (19/37)Receiving objects:  54% (20/37)Receiving objects:  56% (21/37)Receiving objects:  59% (22/37)Receiving objects:  62% (23/37)Receiving objects:  64% (24/37)Receiving objects:  67% (25/37)Receiving objects:  70% (26/37)Receiving objects:  72% (27/37)Receiving objects:  75% (28/37)Receiving objects:  78% (29/37)Receiving objects:  81% (30/37)Receiving objects:  83% (31/37)Receiving objects:  86% (32/37)remote: Total 37 (delta 4), reused 15 (delta 0), pack-reused 0 (from 0)        
+Receiving objects:  89% (33/37)Receiving objects:  91% (34/37)Receiving objects:  94% (35/37)Receiving objects:  97% (36/37)Receiving objects: 100% (37/37)Receiving objects: 100% (37/37), 67.32 KiB | 2.49 MiB/s, done.
+Resolving deltas:   0% (0/4)Resolving deltas:  25% (1/4)Resolving deltas:  50% (2/4)Resolving deltas:  75% (3/4)Resolving deltas: 100% (4/4)Resolving deltas: 100% (4/4), done.
+[2026-10-24 18:21:05] All repositories cloned successfully.
+[2026-10-24 18:21:05] [4/4] Installing all RACECAR libraries and dependencies...
+[2026-10-24 18:21:05] Starting Linux setup...
+[2026-10-24 18:21:05] RUNNING: yes | sudo apt update
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 https://dl.google.com/linux/chrome-stable/deb stable InRelease [2,548 B]
+Get:2 https://dl.google.com/linux/chrome-stable/deb stable/main amd64 Packages [1,411 B]
+Hit:3 https://packages.microsoft.com/repos/code stable InRelease
+Hit:4 https://repo.radeon.com/amdgpu/31.30/ubuntu resolute InRelease
+Hit:5 http://us.archive.ubuntu.com/ubuntu noble InRelease
+Hit:6 https://download.virtualbox.org/virtualbox/debian noble InRelease
+Get:7 http://us.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Hit:8 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:9 https://repo.radeon.com/rocmradeon/apt/26.12 resolute InRelease
+Hit:10 https://download.sublimetext.com apt/stable/ InRelease
+Hit:11 https://repo.radeon.com/graphics/26.12/ubuntu resolute InRelease
+Hit:12 http://us.archive.ubuntu.com/ubuntu noble-backports InRelease
+Get:13 http://us.archive.ubuntu.com/ubuntu noble-updates/main i386 Packages [570 kB]
+Hit:14 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble InRelease
+Get:15 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1,400 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1,706 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu noble-updates/universe i386 Packages [1,150 kB]
+Fetched 4,956 kB in 1s (3,604 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+122 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[2026-10-24 18:21:08] RUNNING: yes | sudo apt install -y python-is-python3 python3-pip
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python-is-python3 is already the newest version (3.11.4-1).
+python3-pip is already the newest version (24.0+dfsg-1ubuntu1.3).
+The following package was automatically installed and is no longer required:
+  nvidia-firmware-595-595.71.05
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 122 not upgraded.
+[2026-10-24 18:21:08] RUNNING: yes | sudo add-apt-repository ppa:deadsnakes/ppa
+Hit:1 https://dl.google.com/linux/chrome-stable/deb stable InRelease
+Hit:2 https://packages.microsoft.com/repos/code stable InRelease
+Hit:3 https://download.virtualbox.org/virtualbox/debian noble InRelease
+Hit:4 http://us.archive.ubuntu.com/ubuntu noble InRelease
+Hit:5 https://repo.radeon.com/amdgpu/31.30/ubuntu resolute InRelease
+Hit:6 http://us.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:7 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:8 http://us.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:9 https://repo.radeon.com/rocmradeon/apt/26.12 resolute InRelease
+Hit:10 https://download.sublimetext.com apt/stable/ InRelease
+Hit:11 https://repo.radeon.com/graphics/26.12/ubuntu resolute InRelease
+Hit:12 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble InRelease
+Reading package lists...
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu/
+Suites: noble
+Components: main
+'
+Description:
+This PPA contains more recent Python versions packaged for Ubuntu.
+
+Disclaimer: there's no guarantee of timely updates in case of security problems or other issues. If you want to use them in a security-or-otherwise-critical environment (say, on a production server), you do so at your own risk.
+
+Update Note
+===========
+Please use this repository instead of ppa:fkrull/deadsnakes.
+
+Reporting Issues
+================
+
+Issues can be reported in the master issue tracker at:
+https://github.com/deadsnakes/issues/issues
+
+Supported Ubuntu and Python Versions
+====================================
+
+- Ubuntu 22.04 (jammy) Python3.7+ (NOT Python3.10)
+- Ubuntu 24.04 (noble) Python3.7+ (NOT Python3.12)
+- Ubuntu 26.04 (resolute) Python3.7+ (NOT Python3.14)
+- Note: Python 3.10 (jammy), Python3.12 (noble), Python3.14 (resolute) are not provided by deadsnakes as upstream ubuntu provides those packages.
+
+Why some packages aren't built:
+- Note: for 22.04+, older python versions requre libssl<3 so they are not currently built
+- If you need these, reach out to asottile to set up a private ppa
+
+The packages may also work on other versions of Ubuntu or Debian, but that is not tested or supported.
+
+Packages
+========
+
+The packages provided here are loosely based on the debian upstream packages with some modifications to make them more usable as non-default pythons and on ubuntu.  As such, the packages follow debian's patterns and often do not include a full python distribution with just `apt install python#.#`.  Here is a list of packages that may be useful along with the default install:
+
+- `python#.#-dev`: includes development headers for building C extensions
+- `python#.#-venv`: provides the standard library `venv` module
+- `python#.#-distutils`: provides the standard library `distutils` module
+- `python#.#-lib2to3`: provides the `2to3-#.#` utility as well as the standard library `lib2to3` module
+- `python#.#-gdbm`: provides the standard library `dbm.gnu` module
+- `python#.#-tk`: provides the standard library `tkinter` module
+
+Third-Party Python Modules
+==========================
+
+Python modules in the official Ubuntu repositories are packaged to work with the Python interpreters from the official repositories. Accordingly, they generally won't work with the Python interpreters from this PPA. As an exception, pure-Python modules for Python 3 will work, but any compiled extension modules won't.
+
+To install 3rd-party Python modules, you should use the common Python packaging tools.  For an introduction into the Python packaging ecosystem and its tools, refer to the Python Packaging User Guide:
+https://packaging.python.org/installing/
+
+Sources
+=======
+The package sources are available at:
+https://github.com/deadsnakes/
+
+Nightly Builds
+==============
+
+For nightly builds, see ppa:deadsnakes/nightly https://launchpad.net/~deadsnakes/+archive/ubuntu/nightly
+More info: https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa
+Adding repository.
+Found existing deb entry in /etc/apt/sources.list.d/deadsnakes-ubuntu-ppa-noble.sources
+[2026-10-24 18:21:28] RUNNING: yes | sudo apt update
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 https://dl.google.com/linux/chrome-stable/deb stable InRelease
+Hit:2 https://packages.microsoft.com/repos/code stable InRelease
+Hit:3 https://download.virtualbox.org/virtualbox/debian noble InRelease
+Hit:4 http://us.archive.ubuntu.com/ubuntu noble InRelease
+Hit:5 https://repo.radeon.com/amdgpu/31.30/ubuntu resolute InRelease
+Hit:6 http://us.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:7 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:8 http://us.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:9 https://download.sublimetext.com apt/stable/ InRelease
+Hit:10 https://repo.radeon.com/rocmradeon/apt/26.12 resolute InRelease
+Hit:11 https://repo.radeon.com/graphics/26.12/ubuntu resolute InRelease
+Hit:12 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+122 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[2026-10-24 18:21:29] RUNNING: yes | sudo apt install -y python3.9 python3.9-venv ffmpeg libsm6 libxext6
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python3.9 is already the newest version (3.9.25-1+noble1).
+python3.9-venv is already the newest version (3.9.25-1+noble1).
+ffmpeg is already the newest version (7:6.1.1-3ubuntu5).
+libsm6 is already the newest version (2:1.2.3-1build3).
+libxext6 is already the newest version (2:1.3.4-1build2).
+The following package was automatically installed and is no longer required:
+  nvidia-firmware-595-595.71.05
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 122 not upgraded.
+[2026-10-24 18:21:30] Creating Python 3.9 virtual environment...
+[2026-10-24 18:21:30] RUNNING: python3.9 -m venv racecar-venv
+[2026-10-24 18:21:31] Installing Python dependencies...
+[2026-10-24 18:21:31] RUNNING: pip install --upgrade pip
+Requirement already satisfied: pip in ./racecar-venv/lib/python3.9/site-packages (23.0.1)
+Collecting pip
+  Using cached pip-26.0.1-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.0.1
+    Uninstalling pip-23.0.1:
+      Successfully uninstalled pip-23.0.1
+Successfully installed pip-26.0.1
+[2026-10-24 18:21:32] RUNNING: pip install -r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt
+Collecting numpy==1.26.2 (from -r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 1))
+  Using cached numpy-1.26.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting matplotlib==3.8.4 (from -r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 2))
+  Using cached matplotlib-3.8.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+Collecting pandas==2.0.3 (from -r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 3))
+  Using cached pandas-2.0.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting mypy (from -r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 4))
+  Using cached mypy-1.19.1-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.2 kB)
+Collecting nptyping==1.4.4 (from -r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 5))
+  Using cached nptyping-1.4.4-py3-none-any.whl.metadata (7.7 kB)
+Collecting opencv-python==4.8.1.78 (from -r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 6))
+  Using cached opencv_python-4.8.1.78-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (19 kB)
+Collecting jinja2<4,>=3.1 (from -r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 7))
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting jupyterlab<5,>=4.0 (from -r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading jupyterlab-4.5.11-py3-none-any.whl.metadata (16 kB)
+Collecting ipywidgets<9,>=8.1 (from -r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Downloading ipywidgets-8.1.9-py3-none-any.whl.metadata (2.4 kB)
+Collecting scipy==1.10 (from -r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 10))
+  Using cached scipy-1.10.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (58 kB)
+Collecting rich==14.0.0 (from -r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 11))
+  Using cached rich-14.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting contourpy>=1.0.1 (from matplotlib==3.8.4->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 2))
+  Using cached contourpy-1.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.4 kB)
+Collecting cycler>=0.10 (from matplotlib==3.8.4->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 2))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib==3.8.4->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 2))
+  Using cached fonttools-4.60.2-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (113 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib==3.8.4->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 2))
+  Using cached kiwisolver-1.4.7-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.3 kB)
+Collecting packaging>=20.0 (from matplotlib==3.8.4->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 2))
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pillow>=8 (from matplotlib==3.8.4->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 2))
+  Using cached pillow-11.3.0-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib==3.8.4->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 2))
+  Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting python-dateutil>=2.7 (from matplotlib==3.8.4->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 2))
+  Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting importlib-resources>=3.2.0 (from matplotlib==3.8.4->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 2))
+  Using cached importlib_resources-6.5.2-py3-none-any.whl.metadata (3.9 kB)
+Collecting pytz>=2020.1 (from pandas==2.0.3->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 3))
+  Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.1 (from pandas==2.0.3->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 3))
+  Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting typish>=1.7.0 (from nptyping==1.4.4->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 5))
+  Using cached typish-1.9.3-py3-none-any.whl.metadata (7.2 kB)
+Collecting markdown-it-py>=2.2.0 (from rich==14.0.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 11))
+  Using cached markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich==14.0.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 11))
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting typing-extensions<5.0,>=4.0.0 (from rich==14.0.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 11))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting MarkupSafe>=2.0 (from jinja2<4,>=3.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 7))
+  Downloading markupsafe-3.0.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting async-lru>=1.0.0 (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached async_lru-2.0.5-py3-none-any.whl.metadata (4.5 kB)
+Collecting httpx<1,>=0.25.0 (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting importlib-metadata>=4.8.3 (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached importlib_metadata-8.7.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting ipykernel!=6.30.0,>=6.5.0 (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached ipykernel-6.31.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting jupyter-core (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached jupyter_core-5.8.1-py3-none-any.whl.metadata (1.6 kB)
+Collecting jupyter-lsp>=2.0.0 (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading jupyter_lsp-2.3.1-py3-none-any.whl.metadata (1.8 kB)
+Collecting jupyter-server<3,>=2.4.0 (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading jupyter_server-2.18.2-py3-none-any.whl.metadata (8.5 kB)
+Collecting jupyterlab-server<3,>=2.28.0 (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached jupyterlab_server-2.28.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting notebook-shim>=0.2 (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached notebook_shim-0.2.4-py3-none-any.whl.metadata (4.0 kB)
+Requirement already satisfied: setuptools>=41.1.0 in ./racecar-venv/lib/python3.9/site-packages (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8)) (79.0.1)
+Collecting tomli>=1.2.2 (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading tomli-2.5.0-py3-none-any.whl.metadata (10 kB)
+Collecting tornado>=6.2.0 (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading tornado-6.5.10-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (2.8 kB)
+Collecting traitlets (from jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading traitlets-5.15.1-py3-none-any.whl.metadata (10 kB)
+Collecting comm>=0.1.3 (from ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Using cached comm-0.2.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting ipython>=6.1.0 (from ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Using cached ipython-8.18.1-py3-none-any.whl.metadata (6.0 kB)
+Collecting widgetsnbextension~=4.0.16 (from ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Downloading widgetsnbextension-4.0.16-py3-none-any.whl.metadata (1.6 kB)
+Collecting jupyterlab_widgets~=3.0.17 (from ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Downloading jupyterlab_widgets-3.0.17-py3-none-any.whl.metadata (20 kB)
+Collecting anyio (from httpx<1,>=0.25.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
+Collecting certifi (from httpx<1,>=0.25.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx<1,>=0.25.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx<1,>=0.25.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.25.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting argon2-cffi>=21.1 (from jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached argon2_cffi-25.1.0-py3-none-any.whl.metadata (4.1 kB)
+Collecting jupyter-client>=7.4.4 (from jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached jupyter_client-8.6.3-py3-none-any.whl.metadata (8.3 kB)
+Collecting jupyter-events>=0.11.0 (from jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading jupyter_events-0.12.1-py3-none-any.whl.metadata (5.8 kB)
+Collecting jupyter-server-terminals>=0.4.4 (from jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached jupyter_server_terminals-0.5.4-py3-none-any.whl.metadata (5.9 kB)
+Collecting nbconvert>=6.4.4 (from jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading nbconvert-7.17.2-py3-none-any.whl.metadata (8.4 kB)
+Collecting nbformat>=5.3.0 (from jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+Collecting overrides>=5.0 (from jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting prometheus-client>=0.9 (from jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading prometheus_client-0.26.0-py3-none-any.whl.metadata (2.1 kB)
+Collecting pyzmq>=24 (from jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading pyzmq-27.2.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.8 kB)
+Collecting send2trash>=1.8.2 (from jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached send2trash-2.1.0-py3-none-any.whl.metadata (4.1 kB)
+Collecting terminado>=0.8.3 (from jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached terminado-0.18.1-py3-none-any.whl.metadata (5.8 kB)
+Collecting websocket-client>=1.7 (from jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting babel>=2.10 (from jupyterlab-server<3,>=2.28.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached babel-2.18.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting json5>=0.9.0 (from jupyterlab-server<3,>=2.28.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading json5-0.17.3-py3-none-any.whl.metadata (27 kB)
+Collecting jsonschema>=4.18.0 (from jupyterlab-server<3,>=2.28.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached jsonschema-4.25.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting requests>=2.31 (from jupyterlab-server<3,>=2.28.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting mypy_extensions>=1.0.0 (from mypy->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 4))
+  Using cached mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting pathspec>=0.9.0 (from mypy->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 4))
+  Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+Collecting librt>=0.6.2 (from mypy->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 4))
+  Downloading librt-0.16.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (1.3 kB)
+Collecting exceptiongroup>=1.0.2 (from anyio->httpx<1,>=0.25.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+Collecting argon2-cffi-bindings (from argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached argon2_cffi_bindings-25.1.0-cp39-abi3-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (7.4 kB)
+Collecting zipp>=3.20 (from importlib-metadata>=4.8.3->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading zipp-3.23.1-py3-none-any.whl.metadata (3.6 kB)
+Collecting debugpy>=1.6.5 (from ipykernel!=6.30.0,>=6.5.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading debugpy-1.8.21-cp39-cp39-manylinux_2_34_x86_64.whl.metadata (1.4 kB)
+Collecting matplotlib-inline>=0.1 (from ipykernel!=6.30.0,>=6.5.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading matplotlib_inline-0.2.2-py3-none-any.whl.metadata (2.4 kB)
+Collecting nest-asyncio>=1.4 (from ipykernel!=6.30.0,>=6.5.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting psutil>=5.7 (from ipykernel!=6.30.0,>=6.5.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting decorator (from ipython>=6.1.0->ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Downloading decorator-5.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting jedi>=0.16 (from ipython>=6.1.0->ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Using cached jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting prompt-toolkit<3.1.0,>=3.0.41 (from ipython>=6.1.0->ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Using cached prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+Collecting stack-data (from ipython>=6.1.0->ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Using cached stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+Collecting pexpect>4.3 (from ipython>=6.1.0->ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Using cached pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting wcwidth (from prompt-toolkit<3.1.0,>=3.0.41->ipython>=6.1.0->ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Downloading wcwidth-0.9.4-py3-none-any.whl.metadata (23 kB)
+Collecting parso<0.9.0,>=0.8.4 (from jedi>=0.16->ipython>=6.1.0->ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Downloading parso-0.8.7-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.28.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.28.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.28.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached referencing-0.36.2-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.28.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached rpds_py-0.27.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting platformdirs>=2.5 (from jupyter-core->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached platformdirs-4.4.0-py3-none-any.whl.metadata (12 kB)
+Collecting python-json-logger>=2.0.4 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached python_json_logger-4.0.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting pyyaml>=5.3 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached pyyaml-6.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting rfc3339-validator (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting rfc3986-validator>=0.1.1 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached rfc3986_validator-0.1.1-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting fqdn (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading fqdn-1.6.0-py3-none-any.whl.metadata (9.4 kB)
+Collecting isoduration (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached isoduration-20.11.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting jsonpointer>1.13 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached jsonpointer-3.0.0-py2.py3-none-any.whl.metadata (2.3 kB)
+Collecting rfc3987-syntax>=1.1.0 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached rfc3987_syntax-1.1.0-py3-none-any.whl.metadata (7.7 kB)
+Collecting uri-template (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached uri_template-1.3.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting webcolors>=24.6.0 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached webcolors-24.11.1-py3-none-any.whl.metadata (2.2 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich==14.0.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 11))
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting beautifulsoup4 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting bleach!=5.0.0 (from bleach[css]!=5.0.0->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached bleach-6.2.0-py3-none-any.whl.metadata (30 kB)
+Collecting defusedxml (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Collecting jupyterlab-pygments (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached jupyterlab_pygments-0.3.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting mistune<4,>=2.0.3 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading mistune-3.3.4-py3-none-any.whl.metadata (1.9 kB)
+Collecting nbclient>=0.5.0 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached nbclient-0.10.2-py3-none-any.whl.metadata (8.3 kB)
+Collecting pandocfilters>=1.4.1 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached pandocfilters-1.5.1-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting webencodings (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting tinycss2<1.5,>=1.1.0 (from bleach[css]!=5.0.0->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached tinycss2-1.4.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting fastjsonschema>=2.15 (from nbformat>=5.3.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached fastjsonschema-2.21.2-py3-none-any.whl.metadata (2.3 kB)
+Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython>=6.1.0->ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Using cached ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting six>=1.6 (from python-dateutil>=2.7->matplotlib==3.8.4->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 2))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting charset_normalizer<4,>=2 (from requests>=2.31->jupyterlab-server<3,>=2.28.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading charset_normalizer-3.5.2-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+Collecting urllib3<3,>=1.21.1 (from requests>=2.31->jupyterlab-server<3,>=2.28.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting lark>=1.2.2 (from rfc3987-syntax>=1.1.0->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached lark-1.3.1-py3-none-any.whl.metadata (1.8 kB)
+Collecting cffi>=1.0.1 (from argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached cffi-2.0.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+Collecting soupsieve>=1.6.1 (from beautifulsoup4->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Downloading soupsieve-2.8.4-py3-none-any.whl.metadata (4.6 kB)
+Collecting arrow>=0.15.0 (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab<5,>=4.0->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 8))
+  Using cached arrow-1.4.0-py3-none-any.whl.metadata (7.7 kB)
+Collecting executing>=1.2.0 (from stack-data->ipython>=6.1.0->ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Downloading executing-2.3.0-py3-none-any.whl.metadata (9.1 kB)
+Collecting asttokens>=2.1.0 (from stack-data->ipython>=6.1.0->ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Downloading asttokens-3.0.2-py3-none-any.whl.metadata (5.7 kB)
+Collecting pure-eval (from stack-data->ipython>=6.1.0->ipywidgets<9,>=8.1->-r /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/requirements.txt (line 9))
+  Downloading pure_eval-0.2.4-py3-none-any.whl.metadata (6.4 kB)
+Using cached numpy-1.26.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+Using cached matplotlib-3.8.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
+Using cached pandas-2.0.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+Using cached nptyping-1.4.4-py3-none-any.whl (31 kB)
+Using cached opencv_python-4.8.1.78-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (61.7 MB)
+Using cached scipy-1.10.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.4 MB)
+Using cached rich-14.0.0-py3-none-any.whl (243 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading jupyterlab-4.5.11-py3-none-any.whl (12.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.5/12.5 MB 61.2 MB/s  0:00:00
+Downloading ipywidgets-8.1.9-py3-none-any.whl (140 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading jupyter_server-2.18.2-py3-none-any.whl (391 kB)
+Using cached jupyterlab_server-2.28.0-py3-none-any.whl (59 kB)
+Downloading jupyterlab_widgets-3.0.17-py3-none-any.whl (217 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 28.6 MB/s  0:00:00
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading widgetsnbextension-4.0.16-py3-none-any.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 49.6 MB/s  0:00:00
+Using cached mypy-1.19.1-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (13.5 MB)
+Using cached anyio-4.12.1-py3-none-any.whl (113 kB)
+Using cached argon2_cffi-25.1.0-py3-none-any.whl (14 kB)
+Using cached async_lru-2.0.5-py3-none-any.whl (6.1 kB)
+Using cached babel-2.18.0-py3-none-any.whl (10.2 MB)
+Using cached comm-0.2.3-py3-none-any.whl (7.3 kB)
+Using cached contourpy-1.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (321 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Using cached fonttools-4.60.2-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.8 MB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Using cached importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+Using cached importlib_resources-6.5.2-py3-none-any.whl (37 kB)
+Using cached ipykernel-6.31.0-py3-none-any.whl (117 kB)
+Downloading debugpy-1.8.21-cp39-cp39-manylinux_2_34_x86_64.whl (3.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 55.1 MB/s  0:00:00
+Using cached ipython-8.18.1-py3-none-any.whl (808 kB)
+Using cached prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+Using cached jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+Downloading parso-0.8.7-py2.py3-none-any.whl (107 kB)
+Downloading json5-0.17.3-py3-none-any.whl (34 kB)
+Using cached jsonschema-4.25.1-py3-none-any.whl (90 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Using cached jupyter_client-8.6.3-py3-none-any.whl (106 kB)
+Using cached jupyter_core-5.8.1-py3-none-any.whl (28 kB)
+Downloading jupyter_events-0.12.1-py3-none-any.whl (19 kB)
+Using cached jsonpointer-3.0.0-py2.py3-none-any.whl (7.6 kB)
+Downloading jupyter_lsp-2.3.1-py3-none-any.whl (77 kB)
+Using cached jupyter_server_terminals-0.5.4-py3-none-any.whl (13 kB)
+Using cached kiwisolver-1.4.7-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+Downloading librt-0.16.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (515 kB)
+Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading markupsafe-3.0.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Downloading matplotlib_inline-0.2.2-py3-none-any.whl (9.5 kB)
+Using cached mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+Downloading nbconvert-7.17.2-py3-none-any.whl (262 kB)
+Downloading mistune-3.3.4-py3-none-any.whl (66 kB)
+Using cached bleach-6.2.0-py3-none-any.whl (163 kB)
+Using cached tinycss2-1.4.0-py3-none-any.whl (26 kB)
+Using cached nbclient-0.10.2-py3-none-any.whl (25 kB)
+Using cached nbformat-5.10.4-py3-none-any.whl (78 kB)
+Using cached fastjsonschema-2.21.2-py3-none-any.whl (24 kB)
+Using cached nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Using cached notebook_shim-0.2.4-py3-none-any.whl (13 kB)
+Using cached overrides-7.7.0-py3-none-any.whl (17 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Using cached pandocfilters-1.5.1-py2.py3-none-any.whl (8.7 kB)
+Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+Using cached pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+Using cached pillow-11.3.0-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
+Using cached platformdirs-4.4.0-py3-none-any.whl (18 kB)
+Downloading prometheus_client-0.26.0-py3-none-any.whl (64 kB)
+Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+Using cached python_json_logger-4.0.0-py3-none-any.whl (15 kB)
+Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+Using cached pyyaml-6.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (750 kB)
+Downloading pyzmq-27.2.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (898 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 898.4/898.4 kB 29.0 MB/s  0:00:00
+Using cached referencing-0.36.2-py3-none-any.whl (26 kB)
+Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.5.2-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (271 kB)
+Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+Using cached rfc3986_validator-0.1.1-py2.py3-none-any.whl (4.2 kB)
+Using cached rfc3987_syntax-1.1.0-py3-none-any.whl (8.0 kB)
+Using cached lark-1.3.1-py3-none-any.whl (113 kB)
+Using cached rpds_py-0.27.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (384 kB)
+Using cached send2trash-2.1.0-py3-none-any.whl (17 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached terminado-0.18.1-py3-none-any.whl (14 kB)
+Downloading tomli-2.5.0-py3-none-any.whl (14 kB)
+Downloading tornado-6.5.10-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (467 kB)
+Downloading traitlets-5.15.1-py3-none-any.whl (85 kB)
+Using cached typish-1.9.3-py3-none-any.whl (45 kB)
+Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+Using cached webcolors-24.11.1-py3-none-any.whl (14 kB)
+Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Using cached websocket_client-1.9.0-py3-none-any.whl (82 kB)
+Downloading zipp-3.23.1-py3-none-any.whl (10 kB)
+Using cached argon2_cffi_bindings-25.1.0-cp39-abi3-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (87 kB)
+Using cached cffi-2.0.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
+Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+Downloading soupsieve-2.8.4-py3-none-any.whl (37 kB)
+Downloading decorator-5.3.1-py3-none-any.whl (10 kB)
+Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Downloading fqdn-1.6.0-py3-none-any.whl (12 kB)
+Using cached isoduration-20.11.0-py3-none-any.whl (11 kB)
+Using cached arrow-1.4.0-py3-none-any.whl (68 kB)
+Using cached jupyterlab_pygments-0.3.0-py3-none-any.whl (15 kB)
+Using cached pycparser-2.23-py3-none-any.whl (118 kB)
+Using cached rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Using cached stack_data-0.6.3-py3-none-any.whl (24 kB)
+Downloading asttokens-3.0.2-py3-none-any.whl (28 kB)
+Downloading executing-2.3.0-py3-none-any.whl (29 kB)
+Downloading pure_eval-0.2.4-py3-none-any.whl (11 kB)
+Using cached uri_template-1.3.0-py3-none-any.whl (11 kB)
+Downloading wcwidth-0.9.4-py3-none-any.whl (301 kB)
+Installing collected packages: webencodings, typish, pytz, pure-eval, ptyprocess, fastjsonschema, zipp, widgetsnbextension, websocket-client, webcolors, wcwidth, urllib3, uri-template, tzdata, typing-extensions, traitlets, tornado, tomli, tinycss2, soupsieve, six, send2trash, rpds-py, rfc3986-validator, pyzmq, pyyaml, pyparsing, pygments, pycparser, psutil, prometheus-client, platformdirs, pillow, pexpect, pathspec, parso, pandocfilters, packaging, overrides, numpy, nest-asyncio, mypy_extensions, mdurl, MarkupSafe, librt, lark, kiwisolver, jupyterlab_widgets, jupyterlab-pygments, jsonpointer, json5, idna, h11, fqdn, fonttools, executing, defusedxml, decorator, debugpy, cycler, comm, charset_normalizer, certifi, bleach, babel, attrs, asttokens, terminado, stack-data, scipy, rfc3987-syntax, rfc3339-validator, requests, referencing, python-json-logger, python-dateutil, prompt-toolkit, opencv-python, nptyping, mypy, mistune, matplotlib-inline, markdown-it-py, jupyter-core, jinja2, jedi, importlib-resources, importlib-metadata, httpcore, exceptiongroup, contourpy, cffi, beautifulsoup4, async-lru, rich, pandas, matplotlib, jupyter-server-terminals, jupyter-client, jsonschema-specifications, ipython, arrow, argon2-cffi-bindings, anyio, jsonschema, isoduration, ipywidgets, ipykernel, httpx, argon2-cffi, nbformat, nbclient, jupyter-events, nbconvert, jupyter-server, notebook-shim, jupyterlab-server, jupyter-lsp, jupyterlab
+
+Successfully installed MarkupSafe-3.0.4 anyio-4.12.1 argon2-cffi-25.1.0 argon2-cffi-bindings-25.1.0 arrow-1.4.0 asttokens-3.0.2 async-lru-2.0.5 attrs-26.1.0 babel-2.18.0 beautifulsoup4-4.15.0 bleach-6.2.0 certifi-2026.10.23 cffi-2.0.0 charset_normalizer-3.5.2 comm-0.2.3 contourpy-1.3.0 cycler-0.12.1 debugpy-1.8.21 decorator-5.3.1 defusedxml-0.7.1 exceptiongroup-1.3.1 executing-2.3.0 fastjsonschema-2.21.2 fonttools-4.60.2 fqdn-1.6.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 importlib-metadata-8.7.1 importlib-resources-6.5.2 ipykernel-6.31.0 ipython-8.18.1 ipywidgets-8.1.9 isoduration-20.11.0 jedi-0.19.2 jinja2-3.1.6 json5-0.17.3 jsonpointer-3.0.0 jsonschema-4.25.1 jsonschema-specifications-2025.9.1 jupyter-client-8.6.3 jupyter-core-5.8.1 jupyter-events-0.12.1 jupyter-lsp-2.3.1 jupyter-server-2.18.2 jupyter-server-terminals-0.5.4 jupyterlab-4.5.11 jupyterlab-pygments-0.3.0 jupyterlab-server-2.28.0 jupyterlab_widgets-3.0.17 kiwisolver-1.4.7 lark-1.3.1 librt-0.16.0 markdown-it-py-3.0.0 matplotlib-3.8.4 matplotlib-inline-0.2.2 mdurl-0.1.2 mistune-3.3.4 mypy-1.19.1 mypy_extensions-1.1.0 nbclient-0.10.2 nbconvert-7.17.2 nbformat-5.10.4 nest-asyncio-1.6.0 notebook-shim-0.2.4 nptyping-1.4.4 numpy-1.26.2 opencv-python-4.8.1.78 overrides-7.7.0 packaging-26.3 pandas-2.0.3 pandocfilters-1.5.1 parso-0.8.7 pathspec-1.1.1 pexpect-4.9.0 pillow-11.3.0 platformdirs-4.4.0 prometheus-client-0.26.0 prompt-toolkit-3.0.52 psutil-7.2.2 ptyprocess-0.7.0 pure-eval-0.2.4 pycparser-2.23 pygments-2.21.0 pyparsing-3.3.3 python-dateutil-3.0.0 python-json-logger-4.0.0 pytz-2026.5 pyyaml-6.0.3 pyzmq-27.2.0 referencing-0.36.2 requests-2.32.5 rfc3339-validator-0.1.4 rfc3986-validator-0.1.1 rfc3987-syntax-1.1.0 rich-14.0.0 rpds-py-0.27.1 scipy-1.10.0 send2trash-2.1.0 six-1.17.0 soupsieve-2.8.4 stack-data-0.6.3 terminado-0.18.1 tinycss2-1.4.0 tomli-2.5.0 tornado-6.5.10 traitlets-5.15.1 typing-extensions-4.16.0 typish-1.9.3 tzdata-2026.5 uri-template-1.3.0 urllib3-2.6.3 wcwidth-0.9.4 webcolors-24.11.1 webencodings-0.5.1 websocket-client-1.9.0 widgetsnbextension-4.0.16 zipp-3.23.1
+[2026-10-24 18:21:50] RUNNING: busybox dos2unix /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/racecar_tool.sh
+[2026-10-24 18:21:50] Writing .config file...
+[2026-10-24 18:21:50] Writing .local_bashrc.sh...
+[2026-10-24 18:21:50] Shell configuration complete.
+[2026-10-24 18:21:50] Wrote /home/sixian/Documents/racecar-neo-installer/racecar-venv/lib/python3.9/site-packages/racecar_student.pth → /home/sixian/Documents/racecar-neo-installer/racecar-student/library
+[2026-10-24 18:21:50] 
+[2026-10-24 18:21:50] Running post-setup checks...
+[2026-10-24 18:21:50] ==========================================================================
+[2026-10-24 18:21:50] [PASS] Simulator folder exists
+[2026-10-24 18:21:50] [PASS] Labs folder exists
+[2026-10-24 18:21:50] [PASS] Library folder exists
+[2026-10-24 18:21:50] [PASS] Virtual environment exists
+[2026-10-24 18:21:50] [PASS] Shell config added to ~/.bashrc
+[2026-10-24 18:21:50] [PASS] .local_bashrc.sh created
+[2026-10-24 18:21:50] [PASS] .config file created
+[2026-10-24 18:21:50] [PASS] Racecar tool is working
+[2026-10-24 18:21:50] [PASS] No command failures detected in log file
+[2026-10-24 18:21:50] [PASS] Library wired into venv (racecar_core, racecar_utils importable)
+[2026-10-24 18:21:52] [PASS] All Python dependencies installed
+[2026-10-24 18:21:52] 
+[2026-10-24 18:21:52] ==========================================================================
+[2026-10-24 18:21:52] All 11 checks passed!
+[2026-10-24 18:21:52] ==========================================================================
+[2026-10-24 18:21:52] 
+[2026-10-24 18:21:52] ======================== INSTALLATION SUMMARY ========================
+[2026-10-24 18:21:52]   Platform:         linux
+[2026-10-24 18:21:52]   Curriculum:       outreach
+[2026-10-24 18:21:52]   Install location: /home/sixian/Documents/racecar-neo-installer
+[2026-10-24 18:21:52]   Log file:         /home/sixian/Documents/racecar-neo-installer/racecar-student/scripts/.logs/setup_2026-10-24_18-20-47.log
+[2026-10-24 18:21:52]   Duration:         1m 5s
+[2026-10-24 18:21:52]   Checks:           11/11 passed
+[2026-10-24 18:21:52] ======================================================================
+[2026-10-24 18:21:52] ========== SETUP LOG END ==========
