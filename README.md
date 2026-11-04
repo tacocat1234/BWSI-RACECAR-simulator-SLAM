@@ -1,3 +1,19 @@
+# Project Explanation
+
+This code is my implementation of the optional SLAM bonus challenge for the BWSI RACECAR. 
+It is mostly built off of the code I developed during my time at BWSI as an optional extension beyond the core curriculum (It was included as a potential thing you could work on, but never explicitly taught anywhere or expected). I worked on it primarily on my own time at home after class or whenever we had our quest log code ready and were waiting for our turn to go downstairs and test on the official track. I also worked with my teammate Viir on some parts, such as ICP.
+
+The original repository upon which this current repository was based on with the full commit history of SLAM as I developed it during the time of the course can be found [here](https://github.com/tacocat1234/BWSI-RACECAR-T9/tree/main/racecar-student/QUEST_LOG/SLAM/sixian_versions) and [here](https://github.com/vsood28/BWSI-RACECAR-T9/tree/1ee4400cf6ca3f922bce88c753f3b385ce0a90b2/racecar-student/QUEST_LOG/SLAM) 
+
+The first link is the final product at the end of the program including the commits for unit test creation, and the second link is to the commit with the code prior to file reorganization.
+
+The primary changes with regards to the final version at the end of the course was creating a simulated “fake ROS” file to interface between the simulator and the original code I wrote through a simulated ROS interface, since the code for the course previously interfaced with the real ROS nodes of the RACECAR.
+Most of the other changes were bugfixes, such as sign errors or conversion errors, as well as developing a complete SLAM test with pathfinding, something I did not have enough time to finish before the course ended.
+
+The relevant code files for this project are found in this [directory](https://github.com/tacocat1234/BWSI-RACECAR-simulator-SLAM/tree/main/racecar-student/labs/slam_sim)
+
+The remainder of this README is the original README of the RACECAR NEO platform
+
 # racecar-neo-installer
 
 Instructions for RACECAR Neo installation found [here](https://docs.google.com/document/d/1WnaPee1AA4GwqgW9r1K-RrU2VonvI3ZcDkW5oSuaSaY/edit#heading=h.uxbegx6o23ro)
